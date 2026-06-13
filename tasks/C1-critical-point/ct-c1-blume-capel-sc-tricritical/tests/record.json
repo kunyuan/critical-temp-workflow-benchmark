@@ -19,7 +19,7 @@
   "gold_provenance": "paper_reported_numeric",
   "source_excerpt": "yielding the tricritical coupling ratio and tricritical transition temperature for the simple cubic lattice: alpha^{(t)}=2.84479±0.00030, k_B T^{(t)}/J=1.4182±0.0055.",
   "verification_status": "source_verified",
-  "difficulty_note": "Tricritical point (not standard Tc); alpha^{(t)}=2.844 also required context; microcanonical FSS method",
+  "difficulty_note": "Tricritical point (not standard Tc); alpha^{(t)}=2.844 also required context; microcanonical FSS method Baseline a cloud HPC platform C-MC could not converge (strong first-order metastability); cooling-scan range 1.35-1.55 brackets gold 1.4182 — hard but gold-consistent.",
   "paper_ref": "4bdfa6483262",
   "source_ref": "7b0cac860a68"
  }

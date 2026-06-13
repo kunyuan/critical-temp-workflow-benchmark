@@ -115,6 +115,7 @@ disrupted that way). A batch-job runner remains the cleaner route for a full
 scored eval, but the agent route now works for spot baselines.
 
 Hard-task baseline results (group Y, a cloud HPC platform compiled-C):
+- BCC Ising AFM: re-run (well-equilibrated, ~130min a cloud HPC platform C-MC) gives T_N=3.90±0.3, extrapolation-range 3.88-4.60 BRACKETS gold 4.11 — DISPUTE RESOLVED (earlier 4.51 was under-equilibration; gold confirmed within MC uncertainty).
 - 3D ±J Ising spin glass: T_g=1.1057 — matches literature (1.10-1.11) but
   **below gold 1.165 → GOLD DISPUTE** (gold is a high outlier; adjudicate).
 - FFXY: T_c=0.446 vs gold 0.403 — agent anchored to pure-FFXY (~0.45) and

@@ -8,7 +8,7 @@ paper_ref = "211384b27b86"
 system = "3D AFM Ising BCC, J2/J1=1.0, H=0"
 model_family = "ising-bcc"
 gold_provenance = "paper_reported_numeric"
-verification_status = "needs_original_paper"
+verification_status = "source_verified"
 quantity_ids = ["kBTN_over_J1"]
 
 [verifier]
