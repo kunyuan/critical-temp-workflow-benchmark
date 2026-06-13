@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c2-diluted-3potts-sq-p090"
+track = "C2"
+split = "train"
+paper_ref = "341ea623f741"
+system = "Three-state Potts model, square lattice, dilution p=0.90"
+model_family = "3-state-potts-sq-diluted"
+gold_provenance = "paper_reported_numeric"
+verification_status = "needs_original_paper"
+quantity_ids = ["nu", "alpha", "gamma", "beta"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.1
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

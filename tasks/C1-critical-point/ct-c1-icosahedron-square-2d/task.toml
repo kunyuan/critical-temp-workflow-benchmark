@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-icosahedron-square-2d"
+track = "C1"
+split = "train"
+paper_ref = "6452b260d91b"
+system = "2D icosahedron spin model on square lattice, J=1"
+model_family = "icosahedron-square"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["kBTc_over_J"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.00225
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

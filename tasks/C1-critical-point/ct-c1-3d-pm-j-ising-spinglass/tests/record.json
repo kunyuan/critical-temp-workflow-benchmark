@@ -1,0 +1,35 @@
+{
+ "id": "ct-c1-3d-pm-j-ising-spinglass",
+ "track": "C1",
+ "split": "validation",
+ "question": "Consider the three-dimensional random +/-J Ising spin glass on a simple cubic lattice. Spins S_i = +/-1. Each nearest-neighbor pair (i,j) has an exchange coupling J_{ij} drawn independently from P(J_{ij}) = (1/2)[delta(J_{ij}-J) + delta(J_{ij}+J)] with J=1 and k_B=1. Using the intersection method: (1) measure the equilibrium spin autocorrelation exponent x(T) defined by q(t) = [<S_i(t) S_i(0)>]_av ~ lambda * t^{-x} near criticality, (2) measure the out-of-equilibrium susceptibility growth exponent h(T) defined by chi_out(T) ~ t_w^{h} where t_w is the waiting time, (3) compute apparent exponent eta_1(T) from x and h, (4) compute apparent exponent eta_2(T) from finite-size scaling of the squared overlap <q^2> via L^{d-2}<q^2> ~ L^{-eta} on small samples. The spin-glass transition temperature T_g is identified as the crossing point of eta_1(T) and eta_2(T). Determine T_g in units of J/k_B (quantity: kBTg_over_J). Output a JSON object {\"kBTg_over_J\": <value>}.",
+ "answer": {
+  "kBTg_over_J": 1.165
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.00107
+ },
+ "metadata": {
+  "doi": "10.48550/arXiv.cond-mat/9608028",
+  "system": "3D simple cubic +/-J Ising spin glass, near-neighbour",
+  "model_family": "ising-spinglass-sc-3d",
+  "quantity_ids": [
+   "kBTg_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "For the three-dimensional near-neighbour random ±J Ising spin glass on a simple cubic lattice, applying the intersection method yields the ordering temperature T_g = 1.165 ± 0.010",
+  "verification_status": "needs_original_paper",
+  "difficulty_note": "Spin glass transition; uses intersection of exponent curves rather than Binder crossing; requires both equilibrium and out-of-equilibrium measurements",
+  "cold_solve": {
+   "round": 1,
+   "probe_model": "claude-sonnet baseline (a cloud HPC platform C-MC, async, 1h watchdog)",
+   "date": "2026-06-13",
+   "question_sha256": "59e459d2cf48eba1",
+   "result": "survived"
+  },
+  "gold_dispute": "baseline C-MC on a cloud HPC platform gives T_g=1.1057, matching literature consensus (Ballesteros 2000: 1.109; Hasenbusch 2008: 1.102) but BELOW gold 1.165 — gold is a high outlier, likely an the knowledge-graph service-extraction/variant issue; adjudicate vs original paper (paper 867753035672060883)",
+  "paper_ref": "8f4f88a13caf",
+  "source_ref": "3c60a0933622"
+ }
+}

@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-urhge-anisotropic-heisenberg-cubic"
+track = "C1"
+split = "train"
+paper_ref = "1ddd20a4fb09"
+system = "Anisotropic Heisenberg on cubic lattice, E/J=0.22, D/J=3, K/E=0.7"
+model_family = "heisenberg-cubic"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["kBTc_over_J"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.00665
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

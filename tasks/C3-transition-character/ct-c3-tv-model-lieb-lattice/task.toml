@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c3-tv-model-lieb-lattice"
+track = "C3"
+split = "validation"
+paper_ref = "e45a56b936df"
+system = "t-V model (spinless fermions with NN hopping t and repulsion V) on 2D Lieb lattice at half-filling"
+model_family = "tv-model-lieb-2d"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["transition_order", "universality_class"]
+
+[verifier]
+type = "categorical_exact"
+aliases = {"transition_order": {"continuous": ["second order", "second-order", "2nd order", "continuous"], "first_order": ["first order", "1st order", "discontinuous", "first-order"], "bkt": ["kosterlitz-thouless", "kt", "berezinskii-kosterlitz-thouless"]}, "universality_class": {"2D Ising": ["2d ising", "two-dimensional ising", "ising 2d", "ising universality class", "ising class"]}}
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

@@ -1,0 +1,26 @@
+{
+ "id": "ct-c1-dipolar-ising-square-d100",
+ "track": "C1",
+ "split": "validation",
+ "question": "Consider the two-dimensional Ising model on an L x L square lattice with periodic boundary conditions. The Hamiltonian includes both ferromagnetic nearest-neighbor exchange and long-range antiferromagnetic dipolar interactions: H = -delta * sum_{<i,j>NN} sigma_i sigma_j + sum_{i<j} sigma_i sigma_j / r_{ij}^3, where sigma_i = +/-1, delta is the nearest-neighbor exchange strength, r_{ij} is the distance between sites i and j (in lattice units), and the dipolar sum runs over all distinct pairs. At delta = 1.00, in the h=1 stripe phase (h is the stripe modulation PERIOD in lattice spacings: h=1 = alternating up/down rows, ordering wavevector (pi,pi); h is NOT a magnetic field), what is the infinite-volume critical temperature T_c^0 (= 1/beta_c^0, with k_B=1, in units of the energy coefficients of the Hamiltonian as written above), obtained via finite-size extrapolation of the real part of the leading partition-function zero? Output a JSON object {\"Tc0\": <value>}.",
+ "answer": {
+  "Tc0": 0.39499
+ },
+ "verifier": {
+  "type": "scalar_tolerance"
+ },
+ "metadata": {
+  "doi": "10.1103/physreve.86.011103",
+  "system": "2D dipolar Ising L x L PBC, delta=1.00, stripe phase h=1",
+  "model_family": "ising-square",
+  "quantity_ids": [
+   "Tc0"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "- delta=1.00: T_c^0 = 0.39499(37).",
+  "verification_status": "source_verified",
+  "difficulty_note": "2D dipolar+exchange Ising on square lattice (delta=1.00), partition-function zero FSS with multicanonical MC",
+  "paper_ref": "e1d809681cac",
+  "source_ref": "c6a0a298a7af"
+ }
+}

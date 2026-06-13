@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c3-su2-higgs-confinement"
+track = "C3"
+split = "train"
+paper_ref = "f6d38e2a01cb"
+system = "Frozen-modulus SU(2)-Higgs model on 4D L^4 lattice at beta=2.3, Confinement-Higgs phase boundary"
+model_family = "su2-higgs-4d"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["transition_order"]
+
+[verifier]
+type = "categorical_exact"
+aliases = {"transition_order": {"continuous": ["second order", "second-order", "2nd order", "continuous"], "first_order": ["first order", "1st order", "discontinuous", "first-order", "very weak first order", "weak first-order"], "bkt": ["kosterlitz-thouless", "kt", "berezinskii-kosterlitz-thouless"]}}
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

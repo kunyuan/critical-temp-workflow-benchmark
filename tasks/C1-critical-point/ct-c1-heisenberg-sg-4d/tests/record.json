@@ -1,0 +1,27 @@
+{
+ "id": "ct-c1-heisenberg-sg-4d",
+ "track": "C1",
+ "split": "validation",
+ "question": "Consider the short-range isotropic Heisenberg spin glass on a four-dimensional hypercubic lattice. The Hamiltonian is H = -(1/2) * sum_{<i,j>} J_{ij} * sigma_i . sigma_j, where each spin sigma_i is a three-component unit vector (sigma_i in S^2), the sum runs over nearest-neighbor pairs on the 4D hypercubic lattice (V = L^4) with periodic boundary conditions, and the exchange couplings J_{ij} are independent Gaussian random variables with zero mean and unit variance: P(J_{ij}) = (1/sqrt(2pi)) * exp(-J_{ij}^2 / 2). Simulated Tempering Monte Carlo simulations are performed on lattice sizes L = 3, 4, 5. Report k_B*T_c/J (with k_B=1 and J the coupling scale = the standard deviation of the Gaussian couplings = 1) for the spin-glass critical temperature determined from finite-size scaling of the Binder cumulant g(L,T) = (1/2)*(11 - 9*<q^4>_bar / (<q^2>_bar)^2), where q is the scalar overlap? Output a JSON object {\"kBTc_over_J\": <value>}.",
+ "answer": {
+  "kBTc_over_J": 0.52
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.02404
+ },
+ "metadata": {
+  "doi": "10.48550/arXiv.cond-mat/9410053",
+  "system": "4D Heisenberg spin glass, Gaussian J, L=3,4,5 hypercubic, periodic BC",
+  "model_family": "spin-glass-4d",
+  "quantity_ids": [
+   "kBTc_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "The Binder cumulant g(L,T) is fitted to the scaling form g(L,T)=g_tilde((T-T_c)L^{1/nu}) using a two-parameter fit for lattice sizes L=3,4,5. The best-fit parameters are T_c = 0.52 +/- 0.02, nu = 0.89 +/- 0.06.",
+  "verification_status": "source_verified",
+  "difficulty_note": "4D Heisenberg spin glass (Gaussian disorder), Simulated Tempering MC with Binder-cumulant FSS, L=3-5",
+  "paper_ref": "c4f643a5dc5f",
+  "source_ref": "122d9049dad5"
+ }
+}

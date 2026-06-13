@@ -1,0 +1,26 @@
+{
+ "id": "ct-c1-ising-ferrimagnet-triangular-modelI",
+ "track": "C1",
+ "split": "validation",
+ "question": "Consider the frustrated mixed-spin Ising ferrimagnet on a triangular lattice with three interpenetrating sublattices A, B, and C. Sublattices A and B carry spin-1/2 sites (sigma_i = +/-1/2), sublattice C carries spin-1 sites (S_j in {-1, 0, +1}). The Hamiltonian is H = J sum_{<ij>} s_i s_j + D sum_{j in C} S_j^2, where J<0 is the antiferromagnetic nearest-neighbor exchange coupling between all pairs (A-B, B-C, A-C on the triangular lattice), and D is the single-ion anisotropy acting only on spin-1 sites on sublattice C. Set D/|J|=0. The T=0 ferrimagnetic ground state FR_1 has pattern (+/-1/2, +/-1/2, -/+1) on (A, B, C). Using Monte Carlo FSS on periodic lattices of linear sizes L=24,48,72,96,120, with Binder cumulant and susceptibility scaling, determine the critical temperature k_B T_c / |J| of the continuous paramagnetic-to-FR_1 transition (quantity: kBTc_over_absJ). Output a JSON object {\"kBTc_over_absJ\": <value>}.",
+ "answer": {
+  "kBTc_over_absJ": 0.7485
+ },
+ "verifier": {
+  "type": "scalar_tolerance"
+ },
+ "metadata": {
+  "doi": "10.48550/arXiv.1503.00589",
+  "system": "Frustrated mixed-spin (1/2,1/2,1) Ising ferrimagnet on triangular lattice, AF coupling J<0, D/|J|=0",
+  "model_family": "ising-ferrimagnet-triangular-mixed-spin",
+  "quantity_ids": [
+   "kBTc_over_absJ"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "At D/|J|=0 the Binder-cumulant crossing and FSS yield the critical temperature k_B T_c/|J| = 0.7485 ± 0.001",
+  "verification_status": "source_verified",
+  "difficulty_note": "Frustrated triangular lattice; 2D Ising universality class despite non-bipartite geometry; mixed spin-1/2 and spin-1 sites",
+  "paper_ref": "f2109d5c0c2e",
+  "source_ref": "1af9c789dd8a"
+ }
+}

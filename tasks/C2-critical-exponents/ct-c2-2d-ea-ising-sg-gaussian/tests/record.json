@@ -1,0 +1,31 @@
+{
+ "id": "ct-c2-2d-ea-ising-sg-gaussian",
+ "track": "C2",
+ "split": "train",
+ "question": "Consider the two-dimensional Edwards-Anderson Ising spin glass on a square lattice with nearest-neighbor couplings J_{xy} drawn from a Gaussian distribution (zero mean, unit variance) and periodic boundary conditions. The Hamiltonian is H = -sum_{<xy>} J_{xy} s_x s_y. Finite-size scaling (FSS) is performed near T=0 where criticality occurs. The spin overlap is q_x = s_x tau_x (product over two independent replicas with the same couplings), the Binder ratio is U_4 = overline{<q^4>} / overline{<q^2>}^2, and the dimensionless ratio xi_L/L is used as the FSS control variable. Renormalized temperature quotients Q_T^R(L) are used to extract the thermal exponent 1/nu. The overlap correlation function C(r) ~ 1/r^{D-2+eta} (D=2) at short distances gives eta. Report the following as a JSON object: \"nu\" (correlation-length exponent, the inverse of the thermal exponent 1/nu you extract from the renormalized temperature quotients Q_T^R(L)), \"eta\" (anomalous dimension of the overlap-overlap correlation function), \"omega\" (leading corrections-to-scaling exponent from FSS fits of U_4). Each value should be a float.",
+ "answer": {
+  "nu": 3.5336,
+  "eta": 0.0,
+  "omega": 0.75
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.05
+ },
+ "metadata": {
+  "doi": "10.1103/physrevb.94.024402",
+  "system": "2D Edwards-Anderson Ising spin glass, square lattice, Gaussian couplings N(0,1), periodic BC",
+  "model_family": "ea-ising-2d-gaussian-sg",
+  "quantity_ids": [
+   "nu",
+   "eta",
+   "omega"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "thermal critical exponent 1/nu = 0.283(6) (equivalently nu~3.53); anomalous dimension eta = 0.00(2), conservative bound |eta|<0.02; leading corrections exponent omega = 0.75(10)(5).",
+  "verification_status": "source_verified",
+  "difficulty_note": "2D spin glass at T=0 critical point; very large nu (~3.53). Eta~0 is a non-trivial result. Multispin-coding implementation.",
+  "paper_ref": "09b4010dc0b9",
+  "source_ref": "a895126f55e8"
+ }
+}

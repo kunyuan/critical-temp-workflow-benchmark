@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-ising-bcc-af-kT"
+track = "C1"
+split = "train"
+paper_ref = "6809865796ff"
+system = "BCC nearest-neighbor Ising antiferromagnet, N<=16"
+model_family = "ising-bcc"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["kTc_over_K"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.00197
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

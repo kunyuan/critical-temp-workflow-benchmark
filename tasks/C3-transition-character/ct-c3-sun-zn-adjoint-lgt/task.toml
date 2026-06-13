@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c3-sun-zn-adjoint-lgt"
+track = "C3"
+split = "validation"
+paper_ref = "35fa831b283d"
+system = "SU(N)/Z_N lattice gauge theories on 4^4 lattice with adjoint Wilson plaquette action, N=3,4,5,6"
+model_family = "sun-zn-adjoint-4d"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["transition_order"]
+
+[verifier]
+type = "categorical_exact"
+aliases = {"transition_order": {"continuous": ["second order", "second-order", "2nd order", "continuous"], "first_order": ["first order", "1st order", "discontinuous", "first-order"], "bkt": ["kosterlitz-thouless", "kt", "berezinskii-kosterlitz-thouless"]}}
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

@@ -1,0 +1,35 @@
+{
+ "id": "ct-c1-ising-bcc-afm-h0",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the three-dimensional antiferromagnetic Ising model on a body-centered cubic (BCC) lattice. The Hamiltonian is H = J1*sum_{<i,j>1} S_i S_j + J2*sum_{<i,j>2} S_i S_j, where S_i = +/-1, J1 > 0 and J2 > 0 are antiferromagnetic (positive) nearest-neighbor and next-nearest-neighbor exchange couplings with ratio r = J2/J1 = 1.0, the sums run over first and second nearest-neighbor pairs on the BCC lattice, and periodic boundary conditions are used. At zero external magnetic field (H=0), what is the critical (Neel) temperature T_N in units of k_B T_N / |J1|? Output a JSON object {\"kBTN_over_J1\": <value>}.",
+ "answer": {
+  "kBTN_over_J1": 4.11
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.00304
+ },
+ "metadata": {
+  "doi": "10.21883/FTT.2020.02.48872.553",
+  "system": "3D AFM Ising BCC, J2/J1=1.0, H=0",
+  "model_family": "ising-bcc",
+  "quantity_ids": [
+   "kBTN_over_J1"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "The numerical values of T_N for H = 0,1,2,3,4,5,6 are 4.11, 4.09, 4.04, 3.96, 3.84, 3.69, 3.51, respectively (in units of k_B T/|J1|).",
+  "verification_status": "needs_original_paper",
+  "difficulty_note": "3D BCC Ising antiferromagnet with J2/J1=1.0, MC FSS with L=18-90 elementary cells",
+  "cold_solve": {
+   "round": 1,
+   "probe_model": "claude-sonnet baseline (a cloud HPC platform sandbox for C1)",
+   "date": "2026-06-13",
+   "question_sha256": "925348f89ce592d6",
+   "result": "survived"
+  },
+  "gold_dispute": "a cloud HPC platform baseline MC gives T_N=4.51 vs gold 4.11 (9.7%); J2/J1=1.0 is a frustrated point — check whether gold/question coupling convention matches; adjudicate vs original paper",
+  "paper_ref": "211384b27b86",
+  "source_ref": "a3ab90c23281"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "id": "ct-c1-ising-square-bond-diluted-pure",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the ferromagnetic Ising model on a two-dimensional square lattice. Each site carries a spin S_i = +/-1. The Hamiltonian is H = -J * sum_{<i,j>} S_i S_j where each nearest-neighbor bond is present with probability sigma and absent with probability (1-sigma). For the pure (undiluted) case sigma = 1.0, free boundary conditions are used, and lattice sizes L = 256, 1024, 4096 are studied. What is the critical temperature T_c in units of J/k_B (i.e., k_B T_c / J), determined via Binder cumulant crossing? Output a JSON object {\"kBTc_over_J\": <value>}.",
+ "answer": {
+  "kBTc_over_J": 2.2686
+ },
+ "verifier": {
+  "type": "scalar_tolerance"
+ },
+ "metadata": {
+  "doi": "10.1051/epjconf/20134401004",
+  "system": "2D square Ising, sigma=1.0 (pure), free BC, L=256-4096",
+  "model_family": "ising-nn-square-2d",
+  "quantity_ids": [
+   "kBTc_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "For the pure system (sigma = 1.0), T_c = 2.2686 +/- 0.0028, which is consistent with the exact Onsager value T_c^exact = 2/ln(sqrt(2)+1) approx 2.26918.",
+  "verification_status": "source_verified",
+  "difficulty_note": "Pure 2D square Ising model (sigma=1.0), Binder cumulant crossing at L=256,1024,4096 with free BC",
+  "paper_ref": "b97792582990",
+  "source_ref": "1811ce2f28a2"
+ }
+}

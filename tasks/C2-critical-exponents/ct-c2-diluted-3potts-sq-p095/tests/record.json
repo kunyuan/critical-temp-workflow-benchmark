@@ -1,0 +1,33 @@
+{
+ "id": "ct-c2-diluted-3potts-sq-p095",
+ "track": "C2",
+ "split": "train",
+ "question": "Consider the three-state Potts model on a two-dimensional square lattice with quenched nonmagnetic disorder at spin concentration p=0.95 (fraction p of lattice sites carry a spin; the remaining 1-p are nonmagnetic vacancies). The ferromagnetic exchange coupling is J > 0 (Boltzmann constant k_B = 1). A Monte Carlo simulation is performed using finite-size scaling (FSS) to extract static critical exponents at the ferromagnetic phase transition. FSS uses log-log fits of (i) the order-parameter magnetization M_L, (ii) the susceptibility chi_L, and (iii) the derivative of the Binder cumulant U'_L, each as a function of linear system size L at the estimated critical point. Report the following critical exponents as a JSON object with keys: \"nu\" (correlation-length exponent, xi ~ |T-T_c|^{-nu}), \"alpha\" (specific-heat exponent, C ~ |T-T_c|^{-alpha}), \"gamma\" (susceptibility exponent, chi ~ |T-T_c|^{-gamma}), \"beta\" (magnetization exponent, M ~ |T-T_c|^beta). Each value should be a float. Do not include T_c.",
+ "answer": {
+  "nu": 0.84,
+  "alpha": 0.3,
+  "gamma": 1.45,
+  "beta": 0.12
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.1
+ },
+ "metadata": {
+  "doi": "10.7868/S3034641X25100086",
+  "system": "Three-state Potts model, square lattice, dilution p=0.95",
+  "model_family": "3-state-potts-sq-diluted",
+  "quantity_ids": [
+   "nu",
+   "alpha",
+   "gamma",
+   "beta"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "the static critical exponents are nu = 0.84(1) (correlation-length exponent), alpha = 0.30(1) (specific-heat exponent), gamma = 1.45(1) (susceptibility exponent), and beta = 0.12(1) (magnetization exponent).",
+  "verification_status": "source_verified",
+  "difficulty_note": "Crossover regime between pure and diluted universality classes; exponents are intermediate.",
+  "paper_ref": "341ea623f741",
+  "source_ref": "796214dbfb6a"
+ }
+}

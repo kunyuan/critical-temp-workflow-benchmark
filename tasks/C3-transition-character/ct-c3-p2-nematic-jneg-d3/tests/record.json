@@ -1,0 +1,47 @@
+{
+ "id": "ct-c3-p2-nematic-jneg-d3",
+ "track": "C3",
+ "split": "train",
+ "question": "The P^2 nematic lattice model has site variables hat{n}_r in P^2 (three-dimensional unit vectors with sign identification hat{n} <-> -hat{n}) and nearest-neighbor interaction Hamiltonian H = -J * sum_{<r,r'>} (1/2)[3(hat{n}_r . hat{n}_{r'})^2 - 1] with J<0 (favoring orthogonal nearest-neighbor orientations). Monte Carlo simulations are performed on three-dimensional cubic lattices. The J<0 model has a nonfrustrated, extensively degenerate ground state. The conventional J>0 nematic in d>=3 shows a first-order transition. What is the ORDER of the finite-temperature phase transition of the P^2 nematic model with J<0 on a three-dimensional cubic lattice? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\".",
+ "answer": {
+  "transition_order": "continuous"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.1016/0550-3213(88)90226-x",
+  "system": "P^2 nematic model with J<0 (orthogonally-favoring interaction) on 3D cubic lattice",
+  "model_family": "p2-nematic-cubic-3d",
+  "quantity_ids": [
+   "transition_order"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "Monte Carlo simulations on three-dimensional cubic lattices give clear evidence of a finite-temperature phase transition... demonstrating a finite-temperature, symmetry-breaking, continuous transition with sublattice order",
+  "verification_status": "source_verified",
+  "difficulty_note": "Contrast with J>0 case which is first-order; J<0 is second-order due to symmetry of sublattice order parameter excluding cubic invariant in Landau expansion.",
+  "paper_ref": "5bd99fb72ba4",
+  "source_ref": "799d34ce29ac"
+ }
+}

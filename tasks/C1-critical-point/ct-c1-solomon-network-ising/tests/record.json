@@ -1,0 +1,26 @@
+{
+ "id": "ct-c1-solomon-network-ising",
+ "track": "C1",
+ "split": "validation",
+ "question": "Consider the equilibrium ferromagnetic Ising model on a Solomon network. The network is constructed from two one-dimensional rings each of length L (total N=2L sites). Each spin S_i = +/-1. Spin i in chain 1 interacts with its two nearest neighbors i+/-1 in chain 1 AND with spins P(i)-1 and P(i)+1 in chain 2, where P is a completely random permutation of site indices (quenched disorder); each spin thus has exactly 4 nearest neighbors. The Hamiltonian is H = -J sum_{<ij>} S_i S_j with J=1, k_B=1. Spin flips follow heat-bath dynamics with flip probability P_i = 1/(1+exp(-2E_i/T)) where E_i = -J S_i sum_j S_j. Using Monte Carlo simulation with finite-size scaling (FSS) on systems from N=30,000 to 100,000 sites, with the Binder cumulant U_4 = 1 - <m^4>/(3<m^2>^2) to locate the critical point, determine the critical temperature T_c of the second-order ferromagnetic phase transition. Output a JSON object {\"kBTc_over_J\": <value>}.",
+ "answer": {
+  "kBTc_over_J": 2.995
+ },
+ "verifier": {
+  "type": "scalar_tolerance"
+ },
+ "metadata": {
+  "doi": "10.1142/s0129183116501345",
+  "system": "Ferromagnetic Ising model on Solomon network (two coupled 1D rings, random permutation, 4 neighbors per spin), k_B=J=1",
+  "model_family": "ising-solomon-network",
+  "quantity_ids": [
+   "kBTc_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "a second-order ferromagnetic phase transition occurs at temperature T_c = 2.995(3). The Binder cumulant U_4 = 1 − ⟨m^4⟩/(3⟨m⟩^2) at the critical point is U_4^* = 0.285(4).",
+  "verification_status": "source_verified",
+  "difficulty_note": "Non-standard lattice (random network); Tc significantly higher than regular-lattice Ising; exponents differ from 2D Ising class",
+  "paper_ref": "22b63bca278b",
+  "source_ref": "be3b886a9e34"
+ }
+}

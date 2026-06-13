@@ -1,0 +1,27 @@
+{
+ "id": "ct-c1-urhge-anisotropic-heisenberg-cubic",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider a classical spin model on a cubic lattice designed to capture the magnetism of URhGe. The Hamiltonian is: H = -J * sum_{<i,j>} S_i . S_j + sum_i [D*(S_i^x)^2 + E*((S_i^y)^2 - (S_i^z)^2) + K*(S_i^y)^2*(S_i^z)^2] where S_i are classical unit-length three-component spins on a cubic lattice (with nearest-neighbor exchange J), D >> E > 0 encode hard-axis and in-plane anisotropy, the anisotropy parameters are E/J = 0.22, D/J = 3, K/E = 0.7, and no external magnetic field is applied. Using Monte Carlo simulations with finite-size scaling of the fourth-order cumulant U_L = <m_z^4> / <m_z^2>^2 on cubic clusters of linear size L, what is the zero-field critical (Curie) temperature T_c in units of J/k_B (i.e., k_B T_c / J)? Output a JSON object {\"kBTc_over_J\": <value>}.",
+ "answer": {
+  "kBTc_over_J": 1.88
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.00665
+ },
+ "metadata": {
+  "doi": "10.48550/arxiv.2407.11881",
+  "system": "Anisotropic Heisenberg on cubic lattice, E/J=0.22, D/J=3, K/E=0.7",
+  "model_family": "heisenberg-cubic",
+  "quantity_ids": [
+   "kBTc_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "Classical Monte Carlo simulations using parameters E/J=0.22, D/J=3, K/E=0.7 on cubic clusters yield a zero-field transition temperature T_c/J=1.880(1), corresponding to T_C=9.76 K with the fitted J=5.18 K.",
+  "verification_status": "source_verified",
+  "difficulty_note": "Anisotropic Heisenberg (URhGe model) on cubic lattice with single-ion anisotropy, MC cumulant FSS",
+  "paper_ref": "1ddd20a4fb09",
+  "source_ref": "df1bff8cb682"
+ }
+}

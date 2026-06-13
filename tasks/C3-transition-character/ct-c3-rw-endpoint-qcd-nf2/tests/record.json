@@ -1,0 +1,58 @@
+{
+ "id": "ct-c3-rw-endpoint-qcd-nf2",
+ "track": "C3",
+ "split": "train",
+ "question": "Two-flavor lattice QCD (N_f=2) is simulated with a one-loop Symanzik-improved gauge action and Asqtad staggered fermion action on lattices with temporal extent L_t=4 and spatial volumes L_s=12,16,20. The model exhibits Roberge-Weiss (RW) phase transitions at imaginary chemical potential mu=i*mu_I at theta=(2n+1)pi/3. Finite-size scaling of the Polyakov-loop susceptibility and Binder cumulant B_4 are used to classify the RW endpoint at bare quark mass am=0.038. What is the ORDER of the Roberge-Weiss transition endpoint at am=0.038? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\". If the paper identifies the universality class, include \"universality_class\" using one of: \"3D Ising\", \"tricritical\", \"mean-field\", \"other\".",
+ "answer": {
+  "transition_order": "continuous",
+  "universality_class": "3D Ising"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   },
+   "universality_class": {
+    "3D Ising": [
+     "3d ising",
+     "three-dimensional ising",
+     "ising 3d",
+     "ising universality class",
+     "3-dimensional ising"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.1103/physrevd.95.054503",
+  "system": "Lattice QCD N_f=2 with imaginary chemical potential, Roberge-Weiss endpoint at am=0.038",
+  "model_family": "lattice-qcd-staggered",
+  "quantity_ids": [
+   "transition_order",
+   "universality_class"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "at am=0.026, 0.038, 0.040 the finite-volume behavior and fitted exponents are consistent with a second-order RW endpoint in the three-dimensional Ising universality class",
+  "verification_status": "source_verified",
+  "difficulty_note": "Mass-dependent transition order; intermediate masses (0.026-0.040) are 3D Ising second-order while small/large masses are first-order triple points.",
+  "paper_ref": "1741f7423cdf",
+  "source_ref": "c82e2d404964"
+ }
+}

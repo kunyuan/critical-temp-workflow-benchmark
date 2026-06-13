@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-3d-pm-j-ising-spinglass"
+track = "C1"
+split = "validation"
+paper_ref = "8f4f88a13caf"
+system = "3D simple cubic +/-J Ising spin glass, near-neighbour"
+model_family = "ising-spinglass-sc-3d"
+gold_provenance = "paper_reported_numeric"
+verification_status = "needs_original_paper"
+quantity_ids = ["kBTg_over_J"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.00107
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

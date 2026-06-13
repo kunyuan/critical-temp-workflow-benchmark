@@ -1,0 +1,27 @@
+{
+ "id": "ct-c1-ising-ammann-beenker-j2half",
+ "track": "C1",
+ "split": "validation",
+ "question": "Consider the J1-J2 antiferromagnetic Ising model on the Ammann-Beenker quasicrystal approximants. The Hamiltonian is H = J1 * sum_{<i,j>1} S_i S_j + J2 * sum_{<<i,j>>2} S_i S_j, where S_i = +/-1, J1 > 0 (nearest-neighbor antiferromagnetic), J2 >= 0 (next-nearest-neighbor antiferromagnetic), and the coupling ratio is J2/J1 = 0.5. Open boundary conditions are used on approximants with site counts N = 239, 1393, 8119, 47321 (linear sizes L_k = (1+sqrt(2))^k). Monte Carlo simulations with single-site Metropolis updates and parallel tempering are performed. What is the Neel antiferromagnetic ordering temperature T_N in units of J1/k_B (i.e., k_B T_N / J1), determined from Binder-cumulant crossings of the staggered order parameter? Output a JSON object {\"kBTN_over_J1\": <value>}.",
+ "answer": {
+  "kBTN_over_J1": 1.223
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.00102
+ },
+ "metadata": {
+  "doi": "10.48550/arxiv.2506.11230",
+  "system": "J1-J2 AFM Ising on Ammann-Beenker quasicrystal, J2/J1=0.5, open BC",
+  "model_family": "ising-quasicrystal",
+  "quantity_ids": [
+   "kBTN_over_J1"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "For J2/J1=0.5 the staggered Neel order parameter exhibits a thermodynamic transition at T_N/J1=1.223(4) determined from Binder-cumulant crossings.",
+  "verification_status": "source_verified",
+  "difficulty_note": "Antiferromagnetic Ising on Ammann-Beenker quasicrystal approximants (J2/J1=0.5), parallel tempering MC with N up to 47321 sites",
+  "paper_ref": "9188e45eab13",
+  "source_ref": "aa38fe5d9d12"
+ }
+}

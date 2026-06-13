@@ -1,0 +1,26 @@
+{
+ "id": "ct-c1-3d-xy-bilinear-sc",
+ "track": "C1",
+ "split": "validation",
+ "question": "Consider the classical three-dimensional XY model on a simple cubic lattice with only ferromagnetic bilinear exchange (biquadratic exchange J'=0). Each site has a planar spin with angle theta_i in [0, 2*pi). The Hamiltonian is H = -J sum_{<ij>} cos(theta_i - theta_j) with J>0 (ferromagnetic) and periodic boundary conditions. Using Monte Carlo finite-size scaling on simple cubic lattices, with extrapolation of pseudo-critical temperatures T_c(L) to the thermodynamic limit L→∞ using appropriate FSS forms for the second-order (continuous) ferromagnetic transition, determine the critical temperature T_c in units of J/k_B (quantity: kBTc_over_J). Output a JSON object {\"kBTc_over_J\": <value>}.",
+ "answer": {
+  "kBTc_over_J": 2.196
+ },
+ "verifier": {
+  "type": "scalar_tolerance"
+ },
+ "metadata": {
+  "doi": "10.48550/arXiv.1301.1838",
+  "system": "3D XY model on simple cubic lattice, ferromagnetic bilinear exchange only (J'>0 limit: pure bilinear J/J'→∞)",
+  "model_family": "xy-sc-bilinear",
+  "quantity_ids": [
+   "kBTc_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "the bilinear-only limit listed as T_c/J=2.196(8) for J/J'=∞ (notation as given by the data). These T_c values were obtained by finite-size extrapolation using the appropriate scaling behaviours",
+  "verification_status": "source_verified",
+  "difficulty_note": "Standard 3D XY universality class on SC lattice; reported as the J/J'→∞ limit in a bilinear+biquadratic study; known value ~2.20",
+  "paper_ref": "76123bdd8b9b",
+  "source_ref": "a7f0678ccf78"
+ }
+}

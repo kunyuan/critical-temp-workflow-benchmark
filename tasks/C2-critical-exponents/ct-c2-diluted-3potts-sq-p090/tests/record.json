@@ -1,0 +1,41 @@
+{
+ "id": "ct-c2-diluted-3potts-sq-p090",
+ "track": "C2",
+ "split": "train",
+ "question": "Consider the three-state Potts model on a two-dimensional square lattice with quenched nonmagnetic disorder at spin concentration p=0.90 (fraction p of lattice sites carry a spin; the remaining 1-p are nonmagnetic vacancies). The ferromagnetic exchange coupling is J > 0. A Monte Carlo simulation uses finite-size scaling (FSS) — log-log fits of the magnetization M_L, susceptibility chi_L, and Binder-cumulant derivative U'_L versus system size L — to extract static critical exponents at the ferromagnetic transition. Report the following critical exponents as a JSON object with keys: \"nu\" (correlation-length exponent), \"alpha\" (specific-heat exponent), \"gamma\" (susceptibility exponent), \"beta\" (magnetization exponent). Each value should be a float.",
+ "answer": {
+  "nu": 1.02,
+  "alpha": 0.12,
+  "gamma": 1.55,
+  "beta": 0.17
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.1
+ },
+ "metadata": {
+  "doi": "10.7868/S3034641X25100086",
+  "system": "Three-state Potts model, square lattice, dilution p=0.90",
+  "model_family": "3-state-potts-sq-diluted",
+  "quantity_ids": [
+   "nu",
+   "alpha",
+   "gamma",
+   "beta"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "the static critical exponents are nu = 1.02(1) (correlation-length exponent), alpha = 0.12(1) (specific-heat exponent), gamma = 1.55(1) (susceptibility exponent), and beta = 0.17(1) (magnetization exponent).",
+  "verification_status": "needs_original_paper",
+  "difficulty_note": "Well into the diluted universality class; Harris criterion activated (alpha>0 for pure model).",
+  "cold_solve": {
+   "round": 1,
+   "probe_model": "claude-sonnet baseline (a cloud HPC platform sandbox for C1)",
+   "date": "2026-06-13",
+   "question_sha256": "80a14be6ad808c16",
+   "result": "survived"
+  },
+  "gold_dispute": "baseline gives random-fixed-point exponents (nu=1.17,alpha=-0.34) vs gold (nu=1.02,alpha=+0.12); gold may be the paper measured values at p=0.90 (crossover) vs asymptotic random FP; adjudicate",
+  "paper_ref": "341ea623f741",
+  "source_ref": "71b28cbd5dd4"
+ }
+}

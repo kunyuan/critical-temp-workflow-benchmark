@@ -1,0 +1,26 @@
+{
+ "id": "ct-c1-blume-capel-sc-tricritical",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the ferromagnetic Blume-Capel model on a simple cubic lattice. Each spin S_i takes values in {-1, 0, +1}. The Hamiltonian is H = -J sum_{<ij>} S_i S_j + D sum_i S_i^2, where J>0 is the ferromagnetic exchange coupling and D is the crystal-field anisotropy. The coupling ratio is alpha = D/J. At the tricritical point (alpha^{(t)}, T^{(t)}), the phase transition changes from second order (alpha < alpha^{(t)}) to first order (alpha > alpha^{(t)}). Using a microcanonical Monte Carlo entropic sampling method combined with finite-size extrapolation on simple cubic lattices L=8,10,12,14,18 (N=L^3 spins), with finite-system latent heat and the empirical scaling forms alpha^{(t)}_{L^{1/3}} = alpha^{(t)} + c_1/L and T^{(t)}_{L^{1/3}} = T^{(t)} + c_2/L + c_3/L^2 extrapolated to L→∞, determine the tricritical temperature T^{(t)} in units of J/k_B (quantity: kBTt_over_J). Output a JSON object {\"kBTt_over_J\": <value>}.",
+ "answer": {
+  "kBTt_over_J": 1.4182
+ },
+ "verifier": {
+  "type": "scalar_tolerance"
+ },
+ "metadata": {
+  "doi": "10.1103/physreve.56.5204",
+  "system": "Ferromagnetic Blume-Capel model on simple cubic lattice, S_i in {-1,0,+1}, microcanonical entropic sampling",
+  "model_family": "blume-capel-sc",
+  "quantity_ids": [
+   "kBTt_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "yielding the tricritical coupling ratio and tricritical transition temperature for the simple cubic lattice: alpha^{(t)}=2.84479±0.00030, k_B T^{(t)}/J=1.4182±0.0055.",
+  "verification_status": "source_verified",
+  "difficulty_note": "Tricritical point (not standard Tc); alpha^{(t)}=2.844 also required context; microcanonical FSS method",
+  "paper_ref": "4bdfa6483262",
+  "source_ref": "7b0cac860a68"
+ }
+}

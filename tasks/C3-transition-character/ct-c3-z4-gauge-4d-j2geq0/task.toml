@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c3-z4-gauge-4d-j2geq0"
+track = "C3"
+split = "validation"
+paper_ref = "dd56f6dee20d"
+system = "Extended Z(4) lattice gauge model in 4D with two-parameter plaquette action, J2>=0 regime"
+model_family = "z4-gauge-4d-extended"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["transition_order"]
+
+[verifier]
+type = "categorical_exact"
+aliases = {"transition_order": {"continuous": ["second order", "second-order", "2nd order", "continuous"], "first_order": ["first order", "1st order", "discontinuous", "first-order"], "bkt": ["kosterlitz-thouless", "kt", "berezinskii-kosterlitz-thouless"]}}
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

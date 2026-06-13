@@ -1,0 +1,47 @@
+{
+ "id": "ct-c3-compact-u1-qed-fixed-bc",
+ "track": "C3",
+ "split": "validation",
+ "question": "Pure gauge compact U(1) lattice gauge theory (compact lattice QED) is simulated on four-dimensional hypercubic lattices with FIXED boundary conditions: all link variables on the lattice boundary are fixed to the identity, eliminating monopole world-line loops that wrap around the periodic directions. Simulations are performed for lattice sizes L=6 to 16, measuring the per-plaquette internal energy, specific heat, and Binder cumulant. The energy Binder cumulant and specific-heat peak behavior are analyzed to determine the order of the confinement-deconfinement transition. What is the ORDER of the finite-temperature confinement-deconfinement phase transition of compact U(1) lattice gauge theory as inferred from these fixed-boundary simulations? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\".",
+ "answer": {
+  "transition_order": "continuous"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.1016/0370-2693(94)91276-9",
+  "system": "Compact U(1) lattice QED on 4D hypercubic lattice with fixed boundary conditions (identity links on boundary)",
+  "model_family": "u1-gauge-4d-fixed-bc",
+  "quantity_ids": [
+   "transition_order"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "Specific heat peak grows slowly and shifts toward beta~1, consistent with continuous transition... The combination of smooth energy variation under fixed-boundary conditions and the Binder cumulant tending to 2/3 imply periodic-boundary first-order signals are finite-volume topological artifacts",
+  "verification_status": "source_verified",
+  "difficulty_note": "Fixed-boundary (spherical topology) removes wrapped monopole artifacts that create spurious first-order signals in periodic simulations; result is continuous transition at ~beta=1.",
+  "paper_ref": "268742f648c6",
+  "source_ref": "77e28c488128"
+ }
+}

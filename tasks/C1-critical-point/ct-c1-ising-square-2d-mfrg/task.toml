@@ -1,0 +1,20 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-ising-square-2d-mfrg"
+track = "C1"
+split = "train"
+paper_ref = "63e6e183f337"
+system = "2D square-lattice ferromagnetic Ising model, three-cluster MFRG extrapolation"
+model_family = "ising-nn-square-2d"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["Kc"]
+
+[verifier]
+type = "scalar_tolerance"
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

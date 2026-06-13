@@ -1,0 +1,20 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-blume-capel-sc-tricritical"
+track = "C1"
+split = "train"
+paper_ref = "4bdfa6483262"
+system = "Ferromagnetic Blume-Capel model on simple cubic lattice, S_i in {-1,0,+1}, microcanonical entropic sampling"
+model_family = "blume-capel-sc"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["kBTt_over_J"]
+
+[verifier]
+type = "scalar_tolerance"
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

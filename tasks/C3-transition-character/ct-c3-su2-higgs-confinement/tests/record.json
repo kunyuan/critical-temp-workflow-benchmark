@@ -1,0 +1,49 @@
+{
+ "id": "ct-c3-su2-higgs-confinement",
+ "track": "C3",
+ "split": "train",
+ "question": "The frozen-modulus SU(2)-Higgs model on a four-dimensional lattice at gauge coupling beta=2.3 is defined by S_inf = sum_x (1/4) * kappa_1 * Tr[Phi_dag(x) U_mu(x) Phi(x+mu)] + (beta/4) * sum_P Tr U_P, where Phi_dag Phi=1 (fixed modulus). An extended action adds a next-to-nearest-neighbor gauge-Higgs hopping term with coupling kappa_2. Monte Carlo simulations on L^4 lattices (L up to 24) measure energy histograms, latent heats, and Binder cumulant minima for various kappa_1 values along the Confinement-Higgs phase boundary. What is the ORDER of the Confinement-Higgs phase transition of the frozen-modulus SU(2)-Higgs model at kappa_2=0 (standard action)? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\".",
+ "answer": {
+  "transition_order": "first_order"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order",
+     "very weak first order",
+     "weak first-order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.48550/arXiv.hep-lat/9706020",
+  "system": "Frozen-modulus SU(2)-Higgs model on 4D L^4 lattice at beta=2.3, Confinement-Higgs phase boundary",
+  "model_family": "su2-higgs-4d",
+  "quantity_ids": [
+   "transition_order"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "The combined evidence from the extended-parameter study (a connected line of first-order transitions for kappa_2>0 that weakens continuously as kappa_2->0), the measured nonzero latent heats along that line, and the finite-size specific-heat and Binder cumulant behavior, indicates that the Confinement-Higgs transition for the standard action is consistent with a first-order transition, albeit extremely weak and transient on accessible lattices",
+  "verification_status": "source_verified",
+  "difficulty_note": "Extremely weak first-order at kappa_2=0; two-peak distributions not resolved up to L=24 for standard action; first-order inferred from connected kappa_2>0 line and asymptotic Binder cumulant analysis.",
+  "paper_ref": "f6d38e2a01cb",
+  "source_ref": "408f8a818070"
+ }
+}

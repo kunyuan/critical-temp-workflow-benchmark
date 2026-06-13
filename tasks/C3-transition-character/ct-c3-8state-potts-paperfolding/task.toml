@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c3-8state-potts-paperfolding"
+track = "C3"
+split = "train"
+paper_ref = "d7ebca517333"
+system = "8-state Potts model on 2D square lattice with paper-folding layered aperiodic coupling sequence"
+model_family = "8state-potts-square-aperiodic"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["transition_order"]
+
+[verifier]
+type = "categorical_exact"
+aliases = {"transition_order": {"continuous": ["second order", "second-order", "2nd order", "continuous"], "first_order": ["first order", "1st order", "discontinuous", "first-order"], "bkt": ["kosterlitz-thouless", "kt", "berezinskii-kosterlitz-thouless"]}}
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

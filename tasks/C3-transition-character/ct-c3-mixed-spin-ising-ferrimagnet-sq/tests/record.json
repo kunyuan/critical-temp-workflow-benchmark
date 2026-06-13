@@ -1,0 +1,65 @@
+{
+ "id": "ct-c3-mixed-spin-ising-ferrimagnet-sq",
+ "track": "C3",
+ "split": "train",
+ "question": "A mixed-spin Ising model is defined on a two-dimensional square lattice with Hamiltonian H = J1 * sum_{<i,j>} sigma_i * S_j + D * sum_{j in B} S_j^2 - J2 * sum_{<<i,j>> in B} S_i * S_j, where J1>0 is the antiferromagnetic nearest-neighbor coupling between A-sublattice spins sigma_i=±1 and B-sublattice spins S_j=0,±1, D is the single-site anisotropy on B, and J2 is the next-nearest-neighbor coupling among B spins. Monte Carlo simulations are used to study the phase transitions in the antiferromagnetic (AF), the 0I (half-B-spins in state S=0), and the B-AF phases. What is the ORDER and UNIVERSALITY CLASS of the finite-temperature phase transitions in the AF and 0I phases of this model? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\", and \"universality_class\" using one of: \"2D Ising\", \"3D Ising\", \"BKT\", \"other\".",
+ "answer": {
+  "transition_order": "continuous",
+  "universality_class": "2D Ising"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   },
+   "universality_class": {
+    "2D Ising": [
+     "2d ising",
+     "two-dimensional ising",
+     "ising 2d",
+     "ising universality class",
+     "onsager"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.1088/0953-8984/23/49/496002",
+  "system": "Mixed-spin Ising model (sigma=±1 and S=0,±1) on 2D square lattice with NNN B-B coupling",
+  "model_family": "mixed-spin-ising-sq-2d",
+  "quantity_ids": [
+   "transition_order",
+   "universality_class"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "For the AF (antiferromagnetic) phase, the 0I phase, and the B-AF phase, the finite-temperature transitions are in the two-dimensional Ising universality class (continuous second-order transitions with 2D Ising critical exponents)",
+  "verification_status": "source_verified",
+  "difficulty_note": "Model has compensation points (below Tc where sublattice magnetizations cancel) but the transition itself is standard 2D Ising universality class.",
+  "cold_solve": {
+   "round": 1,
+   "probe_model": "claude-sonnet baseline (a cloud HPC platform sandbox for C1)",
+   "date": "2026-06-13",
+   "question_sha256": "40fce515f5fab84d",
+   "result": "cracked"
+  },
+  "paper_ref": "bac1ee04d7f0",
+  "source_ref": "954a8fd5f62b"
+ }
+}

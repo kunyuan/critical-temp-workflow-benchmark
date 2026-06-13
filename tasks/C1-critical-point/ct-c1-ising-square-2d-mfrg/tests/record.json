@@ -1,0 +1,26 @@
+{
+ "id": "ct-c1-ising-square-2d-mfrg",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the ferromagnetic Ising model on a two-dimensional square lattice. Spins S_i = +/-1; Hamiltonian H = -J sum_{<ij>} S_i S_j with J>0 and periodic boundary conditions. The reduced coupling K = beta*J = J/(k_B*T). Using the three-cluster molecular-field renormalization group (MFRG) method with clusters of sizes L, L'=L-1, L''=L-2 for L=3 to 11: (1) compute the two-point correlation Theta(K) for each cluster size using the transfer matrix, (2) solve the MFRG fixed-point equations for K*, (3) extrapolate K*(L) to L→∞ using the alternating epsilon-algorithm. Determine the extrapolated critical reduced coupling K_c = J/(k_B T_c) (quantity: Kc). Output a JSON object {\"Kc\": <value>}.",
+ "answer": {
+  "Kc": 0.4406
+ },
+ "verifier": {
+  "type": "scalar_tolerance"
+ },
+ "metadata": {
+  "doi": "10.12921/cmst.2002.08.01.63-67",
+  "system": "2D square-lattice ferromagnetic Ising model, three-cluster MFRG extrapolation",
+  "model_family": "ising-nn-square-2d",
+  "quantity_ids": [
+   "Kc"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "the extrapolated critical coupling for L→∞ (obtained via the alternating ε-algorithm) is K_c = 0.4406(1), which coincides with the exact Onsager value 0.4406868 within the quoted error bar.",
+  "verification_status": "source_verified",
+  "difficulty_note": "Standard 2D Ising; MFRG renormalization method rather than direct MC+FSS; exact answer is ln(1+sqrt(2))/2 = 0.4406868",
+  "paper_ref": "63e6e183f337",
+  "source_ref": "76d577471fb3"
+ }
+}

@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c2-3dxy-columnar-disorder"
+track = "C2"
+split = "validation"
+paper_ref = "92bc52738c83"
+system = "3D XY lattice model, simple cubic lattice, quenched columnar disorder (in-plane couplings from {0.1,1.9}, z-couplings=1)"
+model_family = "xy-3d-columnar-disorder"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["nu", "zeta", "z_XY", "z_loop"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.1
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

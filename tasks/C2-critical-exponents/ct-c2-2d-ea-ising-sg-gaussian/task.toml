@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c2-2d-ea-ising-sg-gaussian"
+track = "C2"
+split = "train"
+paper_ref = "09b4010dc0b9"
+system = "2D Edwards-Anderson Ising spin glass, square lattice, Gaussian couplings N(0,1), periodic BC"
+model_family = "ea-ising-2d-gaussian-sg"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["nu", "eta", "omega"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.05
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

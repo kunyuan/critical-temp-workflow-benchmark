@@ -1,0 +1,29 @@
+{
+ "id": "ct-c2-3d-ea-ising-sg-bimodal",
+ "track": "C2",
+ "split": "train",
+ "question": "Consider the three-dimensional Edwards-Anderson Ising spin glass on a simple cubic lattice with nearest-neighbor bimodal couplings J_{ij} in {+1, -1} (drawn with equal probability) and periodic boundary conditions. The Hamiltonian is H = -sum_{<ij>} J_{ij} s_i s_j. Finite-size scaling (FSS) analysis employs Privman-Fisher scaling of the thermodynamic-limit susceptibility chi(tau) and the normalized second-moment correlation length xi(tau)/beta, where tau = 1 - (beta/beta_c)^2 is the reduced temperature variable and beta_c = 0.9075 is the critical inverse temperature. Log-log Wegner scaling fits over the full paramagnetic regime (system sizes L=6,10,20,32) yield the static critical exponents. Report the following as a JSON object: \"nu\" (correlation-length exponent, xi ~ |T-T_c|^{-nu}), \"gamma\" (susceptibility exponent, chi ~ |T-T_c|^{-gamma}). Each value should be a float.",
+ "answer": {
+  "nu": 2.45,
+  "gamma": 6.15
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.05
+ },
+ "metadata": {
+  "doi": "10.1016/j.physa.2017.11.101",
+  "system": "3D Edwards-Anderson Ising spin glass, simple cubic, bimodal couplings J_{ij}=±1, periodic BC",
+  "model_family": "ea-ising-3d-bimodal-sg",
+  "quantity_ids": [
+   "nu",
+   "gamma"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "Privman-Fisher scaling plots for both observables show excellent collapse for all system sizes L=6,10,20,32 over the full temperature range, with critical exponents gamma = 6.15(10) and nu = 2.45(10) that are consistent with independent finite-size scaling analyses.",
+  "verification_status": "source_verified",
+  "difficulty_note": "3D Ising spin glass; large nu value (nu~2.45) and large gamma (~6.15) characteristic of spin glass universality. nu is cited from literature but confirmed by this paper's Privman-Fisher analysis.",
+  "paper_ref": "b0f7bd9a594a",
+  "source_ref": "d60919d0b7cb"
+ }
+}

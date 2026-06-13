@@ -1,0 +1,34 @@
+{
+ "id": "ct-c1-blume-capel-square-d0",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the spin-1 Blume-Capel model on a two-dimensional square lattice. The Hamiltonian is H = -J * sum_{<i,j>} S_i S_j + D * sum_i (S_i)^2, where S_i in {-1, 0, +1}, J is the exchange interaction, D is the crystal field, and the sum <i,j> runs over nearest-neighbor pairs on the square lattice. Periodic boundary conditions are used with linear sizes L = 8, 16, 32, 64, 128. At crystal field D = 0 and zero longitudinal magnetic field h = 0, what is the critical temperature k_B T_c / J, determined via the crossing point of the fourth-order Binder cumulant V_L = 1 - <M^4> / (3 <M^2>^2) for different L? Output a JSON object {\"kBTc_over_J\": <value>}.",
+ "answer": {
+  "kBTc_over_J": 1.69
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.0074
+ },
+ "metadata": {
+  "doi": "10.1088/0031-8949/79/04/045009",
+  "system": "Spin-1 Blume-Capel square lattice, D=0, L=8-128",
+  "model_family": "blume-capel-square",
+  "quantity_ids": [
+   "kBTc_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "Monte Carlo simulations of the spin-1 Blume-Capel model on a square lattice with periodic boundary conditions and linear sizes L=8, 16, 32, 64, 128 estimate the transition temperature at crystal field D=0 and longitudinal magnetic field h=0 as k_B T_c/J = 1.690 via the crossing point of the fourth-order Binder cumulant.",
+  "verification_status": "source_verified",
+  "difficulty_note": "Spin-1 Blume-Capel on 2D square lattice D=0, Binder cumulant crossing L=8-128",
+  "cold_solve": {
+   "round": 1,
+   "probe_model": "claude-sonnet baseline (a cloud HPC platform sandbox for C1)",
+   "date": "2026-06-13",
+   "question_sha256": "11e51c8ca14e8778",
+   "result": "cracked"
+  },
+  "paper_ref": "48abbf7e3dc6",
+  "source_ref": "57f8ebdbed71"
+ }
+}

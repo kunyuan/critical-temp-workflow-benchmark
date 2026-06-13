@@ -1,0 +1,20 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-3d-xy-bilinear-sc"
+track = "C1"
+split = "validation"
+paper_ref = "76123bdd8b9b"
+system = "3D XY model on simple cubic lattice, ferromagnetic bilinear exchange only (J'>0 limit: pure bilinear J/J'→∞)"
+model_family = "xy-sc-bilinear"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["kBTc_over_J"]
+
+[verifier]
+type = "scalar_tolerance"
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

@@ -1,0 +1,27 @@
+{
+ "id": "ct-c1-ising-bilayer-symmetric",
+ "track": "C1",
+ "split": "validation",
+ "question": "Consider two identical coupled Ising planes (a bilayer), each a two-dimensional square lattice with periodic boundary conditions. Spins sigma_i^{layer} = +/-1. The dimensionless Hamiltonian is -beta*H = K * [sum_{<i,j>} sigma_i^1 sigma_j^1 + sum_{<i,j>} sigma_i^2 sigma_j^2 + J_r * sum_i sigma_i^1 sigma_i^2], where K = beta*J is the reduced intra-layer coupling, J_r = J_{12}/J is the ratio of inter-layer to intra-layer coupling (J_{12} is the inter-plane coupling, J the intra-plane coupling). Set J_r=1 (symmetric: equal intra- and inter-layer couplings). Using Metropolis Monte Carlo simulations on lattices of linear size l up to 32 combined with Binder-cumulant analysis (U_4 = 1 - <m^4>/(3<m^2>^2) for the total magnetization), locate the critical inverse temperature K_c at which the bilayer undergoes a ferromagnetic ordering transition (quantity: Kc_at_Jr1). Output a JSON object {\"Kc_at_Jr1\": <value>}.",
+ "answer": {
+  "Kc_at_Jr1": 0.31
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.04032
+ },
+ "metadata": {
+  "doi": "10.1007/bf01054347",
+  "system": "Two coupled Ising planes (bilayer), square lattice, equal intra/inter coupling J_r=1",
+  "model_family": "ising-bilayer-square",
+  "quantity_ids": [
+   "Kc_at_Jr1"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "The estimated (J_r, K_c) pairs are: ...1.0, 0.310;... from MC Binder-cumulant analysis for lattice linear sizes l up to 32",
+  "verification_status": "source_verified",
+  "difficulty_note": "Bilayer geometry; K_c decreases with increasing J_r; J_r=1 means symmetric bilayer; 2D Ising universality class",
+  "paper_ref": "5e1ad8b362fb",
+  "source_ref": "b645791aa1a5"
+ }
+}

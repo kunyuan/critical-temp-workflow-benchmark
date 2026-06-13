@@ -1,0 +1,26 @@
+{
+ "id": "ct-c1-heisenberg-sta-rigid",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the discrete stacked triangular antiferromagnet (STA) in which spins reside on a three-dimensional lattice of stacked triangular layers. Spins are grouped into non-overlapping 'supertriangles' whose three constituent unit-length Heisenberg spins are constrained to form a 120-degree coplanar configuration (local rigidity constraint). The exchange coupling between neighboring spins sets the energy scale J. Periodic boundary conditions are used and lattice linear sizes L = 12, 18, 24, 30, 36 are studied. What is the infinite-system critical temperature T_c(infinity) in units of J (i.e., k_B T_c / J), determined via histogram Monte Carlo and finite-size scaling? Output a JSON object {\"kBTc_over_J\": <value>}.",
+ "answer": {
+  "kBTc_over_J": 1.431
+ },
+ "verifier": {
+  "type": "scalar_tolerance"
+ },
+ "metadata": {
+  "doi": "10.1103/physrevb.51.6731",
+  "system": "Heisenberg stacked triangular AFM, rigid-triangle constraint, L=12-36",
+  "model_family": "heisenberg-triangular",
+  "quantity_ids": [
+   "kBTc_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "extensive histogram Monte Carlo simulations on periodic lattices with linear sizes L=12,18,24,30,36 yield a second-order phase transition with infinite-system critical temperature T_c(infinity)=1.431+/-0.001 (in units where J sets the energy scale).",
+  "verification_status": "source_verified",
+  "difficulty_note": "Heisenberg stacked triangular antiferromagnet with local 120-degree rigidity, histogram MC+FSS",
+  "paper_ref": "02408f9a1807",
+  "source_ref": "048e3abaebd1"
+ }
+}

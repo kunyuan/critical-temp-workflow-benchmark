@@ -1,0 +1,20 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-fcc-uniaxial-ising-dipolar"
+track = "C1"
+split = "validation"
+paper_ref = "4d075477c49f"
+system = "Uniaxial Ising dipolar model on FCC lattice with Ewald summation, pure (no disorder), upper critical dimension d=3"
+model_family = "ising-dipolar-fcc"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["Tc_dipolar"]
+
+[verifier]
+type = "scalar_tolerance"
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

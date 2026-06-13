@@ -1,0 +1,20 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-dipolar-ising-square-d100"
+track = "C1"
+split = "validation"
+paper_ref = "e1d809681cac"
+system = "2D dipolar Ising L x L PBC, delta=1.00, stripe phase h=1"
+model_family = "ising-square"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["Tc0"]
+
+[verifier]
+type = "scalar_tolerance"
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

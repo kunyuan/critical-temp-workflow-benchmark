@@ -1,0 +1,26 @@
+{
+ "id": "ct-c1-ising-4d-hotrg",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the ferromagnetic Ising model on a four-dimensional hypercubic lattice. The Hamiltonian is H = -J * sum_{<i,j>} sigma_i sigma_j, where sigma_i = +/-1 and the sum runs over all nearest-neighbor pairs on the 4D hypercubic lattice with coupling J > 0. What is the critical temperature T_c in units of J/k_B (i.e., k_B T_c / J), determined via the higher-order tensor renormalization group (HOTRG) at bond dimension D_cut=13 and effective system size N = 1024^4 lattice sites? Output a JSON object {\"kBTc_over_J\": <value>}.",
+ "answer": {
+  "kBTc_over_J": 6.650365
+ },
+ "verifier": {
+  "type": "scalar_tolerance"
+ },
+ "metadata": {
+  "doi": "10.1103/physrevd.100.054510",
+  "system": "4D hypercubic ferromagnetic Ising, HOTRG D_cut=13, N=1024^4",
+  "model_family": "ising-4d-hypercubic",
+  "quantity_ids": [
+   "kBTc_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "The HOTRG calculation with bond dimension D_cut=13 on a system evolved to effective linear size L=1024 (N=2^{40}=1024^4 lattice sites) yields a transition temperature estimate T_c(D_cut=13)=6.650365(5).",
+  "verification_status": "source_verified",
+  "difficulty_note": "4D ferromagnetic Ising model, HOTRG tensor renormalization group at D_cut=13, thermodynamic-limit extrapolation",
+  "paper_ref": "988528bdac81",
+  "source_ref": "904d9d6b7371"
+ }
+}

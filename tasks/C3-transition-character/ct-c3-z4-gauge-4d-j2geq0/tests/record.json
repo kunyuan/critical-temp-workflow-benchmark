@@ -1,0 +1,47 @@
+{
+ "id": "ct-c3-z4-gauge-4d-j2geq0",
+ "track": "C3",
+ "split": "validation",
+ "question": "The extended Z(4) lattice gauge model in four dimensions is defined by the two-parameter plaquette action S(J1,J2) = J1 * sum_P (1 - Re Tr U_P) + J2 * sum_P (1 - Re Tr U_P^2), where U_P is the ordered product of Z(4)-valued link variables around plaquette P. Heat-bath Monte Carlo simulations are performed on lattices from 4^4 to 8^4. The Z(4) phase diagram has four regions. The parameter region with J2>=0 (above or on the Wilson-action curve X2=X1^2 in the (X1,X2) Boltzmann-weight plane) is studied. What is the ORDER of the phase transitions for the Z(4) lattice gauge model in the regime J2>=0? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\".",
+ "answer": {
+  "transition_order": "first_order"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.1103/physrevd.27.938",
+  "system": "Extended Z(4) lattice gauge model in 4D with two-parameter plaquette action, J2>=0 regime",
+  "model_family": "z4-gauge-4d-extended",
+  "quantity_ids": [
+   "transition_order"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "Monte Carlo data indicate that all transitions for J2>=0 (i.e., for models in the region above the Wilson-action curve X2=X1^2 in the (X1,X2) plane) are first order... latent-heat behavior",
+  "verification_status": "source_verified",
+  "difficulty_note": "The first-order character weakens as one moves from the Potts point toward the bifurcation; below the Wilson curve (J2<0) the picture changes and a massless/continuous phase may appear.",
+  "paper_ref": "dd56f6dee20d",
+  "source_ref": "09649196cd36"
+ }
+}

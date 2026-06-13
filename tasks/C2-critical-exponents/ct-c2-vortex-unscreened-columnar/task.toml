@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c2-vortex-unscreened-columnar"
+track = "C2"
+split = "validation"
+paper_ref = "e253fc927c7a"
+system = "3D lattice vortex-line model, unscreened (lambda->inf), columnar disorder D in [0,0.8], filling f=1/4"
+model_family = "vortex-3d-unscreened-columnar"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["nu", "zeta", "z"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.1
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

@@ -1,0 +1,20 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-heisenberg-sta-rigid"
+track = "C1"
+split = "train"
+paper_ref = "02408f9a1807"
+system = "Heisenberg stacked triangular AFM, rigid-triangle constraint, L=12-36"
+model_family = "heisenberg-triangular"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["kBTc_over_J"]
+
+[verifier]
+type = "scalar_tolerance"
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

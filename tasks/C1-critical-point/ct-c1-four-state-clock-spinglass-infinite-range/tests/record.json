@@ -1,0 +1,27 @@
+{
+ "id": "ct-c1-four-state-clock-spinglass-infinite-range",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the infinite-range four-state clock spin glass. Each of N spins can point in one of four equally spaced planar orientations theta_i in {0, pi/2, pi, 3*pi/2}. Exchange couplings J_{ij} between ALL N*(N-1)/2 pairs are drawn i.i.d. from the Gaussian distribution P(J_{ij}) = sqrt(N / (2*pi*J^2)) * exp(-N * J_{ij}^2 / (2*J^2)) with zero mean and variance J^2/N (the 1/N scaling keeps the energy extensive). Set k_B=1. Using the standard replica/mean-field analysis of the spin-glass transition for this infinite-range model, determine the paramagnet-to-spin-glass transition temperature T_g in units of J (quantity: Tg_over_J). Output a JSON object {\"Tg_over_J\": <value>}.",
+ "answer": {
+  "Tg_over_J": 0.5
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.1
+ },
+ "metadata": {
+  "doi": "10.1088/0305-4470/22/14/030",
+  "system": "Infinite-range four-state clock spin glass, Gaussian couplings zero mean variance J^2/N",
+  "model_family": "clock4-spinglass-infinite-range",
+  "quantity_ids": [
+   "Tg_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "The paramagnetic to spin-glass transition temperature for the four-state clock spin glass is T_g = J/2 (in units with k_B=1)...derived from the Landau expansion: the coefficient A_{QQ} = 1 - (1/4)(beta*J)^2 vanishes at T = J/2",
+  "verification_status": "source_verified",
+  "difficulty_note": "Analytical (Landau/mean-field) result; infinite-range model; Tg/J=1/2 exactly; supported by MC on N=20,80,320",
+  "paper_ref": "d7baabbee56a",
+  "source_ref": "ef29fd90287f"
+ }
+}

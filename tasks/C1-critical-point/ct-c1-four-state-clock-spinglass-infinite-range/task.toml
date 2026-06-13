@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-four-state-clock-spinglass-infinite-range"
+track = "C1"
+split = "train"
+paper_ref = "d7baabbee56a"
+system = "Infinite-range four-state clock spin glass, Gaussian couplings zero mean variance J^2/N"
+model_family = "clock4-spinglass-infinite-range"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["Tg_over_J"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.1
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

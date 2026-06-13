@@ -1,0 +1,49 @@
+{
+ "id": "ct-c3-u1-villain-worldsheet-4d",
+ "track": "C3",
+ "split": "validation",
+ "question": "The compact U(1) gauge theory in four Euclidean dimensions is simulated using the Villain-equivalent world-sheet formulation, where integer-valued plaquette multiplicities n_p subject to the closed-surface constraint are updated by Metropolis on L^4 hypercubic lattices with periodic boundary conditions, for L from 6 to 24. The specific-heat maximum, Lee-Yang zeroes, energy histograms (latent heat), and autocorrelation times are analyzed. What is the ORDER of the confinement-to-Coulomb (deconfinement) phase transition of the compact U(1) gauge theory in this Villain formulation? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\".",
+ "answer": {
+  "transition_order": "first_order"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order",
+     "weak first order",
+     "very weak first order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.1016/s0550-3213(99)00028-0",
+  "system": "4D compact U(1) gauge theory, Villain world-sheet formulation on L^4 hypercubic lattice",
+  "model_family": "u1-gauge-4d-villain",
+  "quantity_ids": [
+   "transition_order"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "Combining the independent finite-size analyses—specific-heat maxima scaling as L^4 for large L, nonzero extrapolated latent heat Delta e(infty) approx 0.012-0.014, a small finite interfacial free energy 2f_s ~ 1e-4, exponentially growing tunneling times... data are compatible with a very weak first-order phase transition",
+  "verification_status": "source_verified",
+  "difficulty_note": "Very weak first-order: latent heat ~0.012, interfacial free energy ~1e-4; Lee-Yang zeroes give nu=0.329(3) which interpolates between first-order (1/d=0.25) and continuous values.",
+  "paper_ref": "061ca60f8df9",
+  "source_ref": "4e374af2df00"
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "id": "ct-c1-af-quadrupole-rotor-diamond",
+ "track": "C1",
+ "split": "validation",
+ "question": "Consider a classical antiferro quadrupole rotor model on the diamond lattice. Each site carries a two-component unit quadrupole vector Q = (Q_u, Q_v) with |Q|=1 (plane-rotor / XY-like). The nearest-neighbor (NN) interaction on the diamond lattice is antiferromagnetic with coupling strength J=1 (energy unit). Each site also has a single-site threefold cubic anisotropy term with parameter c=3.0. The Hamiltonian is H = J sum_{<ij>} Q_i . Q_j - c sum_i cos(3 * phi_i) where phi_i is the polar angle of Q_i, and the first sum is over NN diamond-lattice bonds. No external field (h=0). Systems are simulated on cubic periodic-boundary cells at multiple system sizes. Using Monte Carlo with Binder-ratio and correlation-length crossing analyses, determine the critical temperature T_c of the zero-field ordering transition in units of J/k_B (quantity: kBTc_over_J). Output a JSON object {\"kBTc_over_J\": <value>}.",
+ "answer": {
+  "kBTc_over_J": 1.2695
+ },
+ "verifier": {
+  "type": "scalar_tolerance"
+ },
+ "metadata": {
+  "doi": "10.48550/arXiv.1605.05175",
+  "system": "Classical antiferro quadrupole rotor (plane-rotor, |Q|=1) on diamond lattice, AF coupling J=1, c=3.0, h=0",
+  "model_family": "xy-rotor-diamond-af",
+  "quantity_ids": [
+   "kBTc_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "For the antiferro rotor model on the diamond lattice with nearest-neighbor antiferro coupling J=1 (energy unit) and threefold single-site anisotropy parameter c=3.0, Monte Carlo Binder-ratio and correlation-length crossing analyses on cubic systems with periodic boundary conditions yield a critical temperature estimate T_c=1.2695(3)",
+  "verification_status": "source_verified",
+  "difficulty_note": "Non-standard lattice (diamond); 3D XY universality class; threefold anisotropy breaks O(2) to Z_3 symmetry",
+  "paper_ref": "3705e0936e88",
+  "source_ref": "954126e90379"
+ }
+}

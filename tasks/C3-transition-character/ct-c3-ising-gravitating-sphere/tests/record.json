@@ -1,0 +1,59 @@
+{
+ "id": "ct-c3-ising-gravitating-sphere",
+ "track": "C3",
+ "split": "train",
+ "question": "Ising spins s_i=±1 are located on the vertices of a triangulated sphere coupled to two-dimensional Euclidean quantum gravity via Regge calculus with the scale-invariant path-integral measure D mu(l) = prod_{<ij>} dl_{ij}/l_{ij} * F({l_{ij}}), where F ensures triangle inequalities. The total area is fixed at A = N2/2 (with N2 the number of triangles). High-statistics Monte Carlo finite-size scaling is performed on this dynamically triangulated sphere. The KPZ/DDK formalism predicts modified critical exponents (e.g., alpha/nu=-2/3) for Ising spins coupled to 2D gravity. What is the ORDER and UNIVERSALITY CLASS of the ferromagnetic-to-paramagnetic phase transition of the Ising model on this gravitating sphere (Regge calculus, scale-invariant measure)? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\", and \"universality_class\" using one of: \"2D Ising\", \"KPZ\", \"mean-field\", \"other\".",
+ "answer": {
+  "transition_order": "continuous",
+  "universality_class": "2D Ising"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   },
+   "universality_class": {
+    "2D Ising": [
+     "2d ising",
+     "two-dimensional ising",
+     "flat-space ising",
+     "onsager",
+     "flat space",
+     "ising universality class"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.48550/arXiv.hep-lat/9512002",
+  "system": "Ising model on dynamically triangulated sphere coupled to 2D quantum gravity via Regge calculus (scale-invariant measure)",
+  "model_family": "ising-2d-quantum-gravity",
+  "quantity_ids": [
+   "transition_order",
+   "universality_class"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "Finite-size scaling analysis... yields critical-exponent estimates that are compatible with the flat-space (Onsager) universality class within the quoted errors: the weighted average for the inverse correlation-length exponent is 1/nu = 1.08(5)...",
+  "verification_status": "source_verified",
+  "difficulty_note": "KPZ gravity-modified exponents (predicted by matrix models/dynamical triangulations) are excluded; Regge calculus with scale-invariant measure gives flat-space Ising universality, contrary to KPZ expectations.",
+  "paper_ref": "eedbac1efa8a",
+  "source_ref": "975373972f7f"
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "ct-c3-tv-model-lieb-lattice",
+ "track": "C3",
+ "split": "validation",
+ "question": "The t-V model of spinless fermions on a two-dimensional Lieb lattice is defined by nearest-neighbor hopping t and repulsive interaction V on a three-sublattice lattice (sublattices A, B, C per unit cell) at half-filling. Below a critical temperature T_c, the system spontaneously breaks particle-hole symmetry and develops a charge density wave. Quantum Monte Carlo simulations (auxiliary-field QMC) with finite-size scaling are performed for system sizes L=4, 6, 8, 10, 12, 15 and interaction strengths V/t = 0.75, 1, 1.5, 2, 3. What is the ORDER and UNIVERSALITY CLASS of the charge-density-wave phase transition of the t-V model on the Lieb lattice? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\", and \"universality_class\" using one of: \"2D Ising\", \"3D Ising\", \"BKT\", \"mean-field\", \"other\".",
+ "answer": {
+  "transition_order": "continuous",
+  "universality_class": "2D Ising"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   },
+   "universality_class": {
+    "2D Ising": [
+     "2d ising",
+     "two-dimensional ising",
+     "ising 2d",
+     "ising universality class",
+     "ising class"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.48550/arXiv.1610.03314",
+  "system": "t-V model (spinless fermions with NN hopping t and repulsion V) on 2D Lieb lattice at half-filling",
+  "model_family": "tv-model-lieb-2d",
+  "quantity_ids": [
+   "transition_order",
+   "universality_class"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "A finite-size scaling analysis of the squared order parameter m^2... shows excellent data collapse when the critical exponents are fixed to the two-dimensional Ising universality class, confirming a continuous transition in the 2D Ising class",
+  "verification_status": "source_verified",
+  "difficulty_note": "CT-INT QMC has heavy-tailed distributions making variance ill-defined; AF-QMC is more reliable for this system. Weak-coupling Tc ~ V^2 (vs mean-field V), strong-coupling approaches classical Ising limit.",
+  "paper_ref": "e45a56b936df",
+  "source_ref": "bd47f809e348"
+ }
+}

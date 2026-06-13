@@ -1,0 +1,59 @@
+{
+ "id": "ct-c3-elastic-ising-af-diamond",
+ "track": "C3",
+ "split": "train",
+ "question": "An elastic Ising antiferromagnet is modeled as a binary alloy on a deformable diamond lattice with antiferromagnetic interactions described by the Stillinger-Weber potential. The system is studied by constant-pressure semigrand-canonical Monte Carlo simulations with system sizes up to linear dimension L=24 (N=8L^3 spins). The staggered composition (staggered magnetization) is the order parameter for a two-sublattice superstructure ordering transition. Field-theoretic predictions for this type of elastic coupling at constant pressure suggest a fluctuation-driven weak first-order transition, but prior simulations were inconclusive. What is the ORDER of the antiferromagnetic ordering phase transition found in these simulations? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\". If the paper identifies the universality class, also include \"universality_class\" using one of: \"3D Ising\", \"mean-field\", \"Fisher-renormalized\", \"other\".",
+ "answer": {
+  "transition_order": "continuous",
+  "universality_class": "3D Ising"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order",
+     "weak first order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   },
+   "universality_class": {
+    "3D Ising": [
+     "3d ising",
+     "three-dimensional ising",
+     "rigid 3d ising",
+     "ising universality class",
+     "ising class"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.1103/physrevb.72.104102",
+  "system": "Binary alloy on deformable diamond lattice with Stillinger-Weber antiferromagnetic potential, constant pressure",
+  "model_family": "elastic-ising-af-diamond",
+  "quantity_ids": [
+   "transition_order",
+   "universality_class"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "the phase transition along the observed phase boundary is consistent with a continuous second-order transition belonging to the universality class of the rigid-lattice three-dimensional Ising model",
+  "verification_status": "source_verified",
+  "difficulty_note": "Theory predicts weak first-order at constant pressure due to elastic coupling, but numerics at accessible sizes L<=24 show 3D Ising continuous behavior; weak first-order may emerge only at larger scales.",
+  "paper_ref": "023fab8e2867",
+  "source_ref": "a40945950b82"
+ }
+}

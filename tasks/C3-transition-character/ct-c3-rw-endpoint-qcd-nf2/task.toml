@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c3-rw-endpoint-qcd-nf2"
+track = "C3"
+split = "train"
+paper_ref = "1741f7423cdf"
+system = "Lattice QCD N_f=2 with imaginary chemical potential, Roberge-Weiss endpoint at am=0.038"
+model_family = "lattice-qcd-staggered"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["transition_order", "universality_class"]
+
+[verifier]
+type = "categorical_exact"
+aliases = {"transition_order": {"continuous": ["second order", "second-order", "2nd order", "continuous"], "first_order": ["first order", "1st order", "discontinuous", "first-order"], "bkt": ["kosterlitz-thouless", "kt", "berezinskii-kosterlitz-thouless"]}, "universality_class": {"3D Ising": ["3d ising", "three-dimensional ising", "ising 3d", "ising universality class", "3-dimensional ising"]}}
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

@@ -1,0 +1,31 @@
+{
+ "id": "ct-c2-vortex-unscreened-columnar",
+ "track": "C2",
+ "split": "validation",
+ "question": "Consider the three-dimensional lattice vortex-line model in the London limit (infinite bare magnetic penetration length lambda -> infinity, i.e. unscreened long-range vortex-vortex interactions) defined by the Hamiltonian H = (1/2) sum_{r,r'} V(r-r') q(r)·q(r'), where q(r) are integer vorticity vectors at each site, V(r) is the isotropic 3D long-range interaction, with quenched columnar defects having random core energies D(r_perp) drawn uniformly from [0, 0.8], coupling constant K=1, and quarter-integer vortex filling f=1/4. An anisotropic finite-size scaling (FSS) analysis uses aspect ratio L_z ~ L^{zeta} to separate perpendicular (xy-plane) and parallel (z-axis) scaling. From Monte Carlo FSS of the helicity modulus and linear resistivity, determine: (1) nu: the perpendicular correlation-length exponent, xi_perp ~ |T-T_c|^{-nu}. (2) zeta: the anisotropy exponent, xi_z ~ xi_perp^{zeta} (= nu_parallel/nu_perp). (3) z: the dynamic critical exponent for local single-plaquette loop-insertion Monte Carlo     dynamics, defined by tau ~ xi_perp^z. Report as a JSON object with keys \"nu\", \"zeta\", \"z\". Each value should be a float.",
+ "answer": {
+  "nu": 1.0,
+  "zeta": 1.25,
+  "z": 1.95
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.1
+ },
+ "metadata": {
+  "doi": "10.1103/physrevb.67.092501",
+  "system": "3D lattice vortex-line model, unscreened (lambda->inf), columnar disorder D in [0,0.8], filling f=1/4",
+  "model_family": "vortex-3d-unscreened-columnar",
+  "quantity_ids": [
+   "nu",
+   "zeta",
+   "z"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "perpendicular correlation-length exponent nu=1.0+/-0.1; anisotropy exponent zeta=1.25+/-0.1 (xi_z ~ xi^zeta); dynamic exponent z=1.95+/-0.1 for local single-plaquette loop-insertion dynamics.",
+  "verification_status": "source_verified",
+  "difficulty_note": "Unscreened (long-range) vortex universality class; distinct from screened model. Anisotropic FSS. Model is London-limit lattice gauge theory.",
+  "paper_ref": "e253fc927c7a",
+  "source_ref": "315bb4c6ac18"
+ }
+}

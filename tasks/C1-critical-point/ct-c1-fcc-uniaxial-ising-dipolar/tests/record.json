@@ -1,0 +1,26 @@
+{
+ "id": "ct-c1-fcc-uniaxial-ising-dipolar",
+ "track": "C1",
+ "split": "validation",
+ "question": "Consider the ferromagnetic uniaxial Ising dipolar model on a face-centred cubic (FCC) lattice with periodic boundary conditions (Ewald summation for long-range dipolar interactions). Each spin sigma_i = +/-1 is oriented along a fixed uniaxial direction. Spins interact via the dipole-dipole Hamiltonian H = -sum_{i<j} D_{ij} sigma_i sigma_j where D_{ij} = (3 cos^2(theta_{ij}) - 1)/r_{ij}^3, with theta_{ij} the angle between the inter-spin vector and the uniaxial axis. Temperatures are in dimensionless units of the dipolar pair energy. The system is at its upper critical dimension (d=3); FSS requires logarithmic corrections with factors log^{1/6}(L), log^{1/4}(L), log^{1/2}(L) and scaled temperature variable t_tilde = L^{y_t} log^{1/6}(L) (t + v L^{-y_t} log^{-2/3}(L)) with y_t=3/2, t=(T-T_c)/T_c. Using MC simulations on linear sizes L=3,4,5,6,7 with Binder cumulant U = 1 - <m^4>/(3<m^2>^2) and susceptibility data collapse, determine the critical temperature T_c in dimensionless dipolar units (quantity: Tc_dipolar). Output a JSON object {\"Tc_dipolar\": <value>}.",
+ "answer": {
+  "Tc_dipolar": 3.152916
+ },
+ "verifier": {
+  "type": "scalar_tolerance"
+ },
+ "metadata": {
+  "doi": "10.48550/arXiv.cond-mat/0509751",
+  "system": "Uniaxial Ising dipolar model on FCC lattice with Ewald summation, pure (no disorder), upper critical dimension d=3",
+  "model_family": "ising-dipolar-fcc",
+  "quantity_ids": [
+   "Tc_dipolar"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "A global critical temperature estimated from fits is T_c=3.152916±0.000005 in dimensionless units of the dipolar pair energy",
+  "verification_status": "source_verified",
+  "difficulty_note": "Upper critical dimension; mean-field FSS with log corrections; very high precision (6 sig figs) from global fit",
+  "paper_ref": "4d075477c49f",
+  "source_ref": "1c6a7f248c69"
+ }
+}

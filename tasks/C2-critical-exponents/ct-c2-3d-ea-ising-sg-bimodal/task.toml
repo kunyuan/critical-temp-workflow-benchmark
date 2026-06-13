@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c2-3d-ea-ising-sg-bimodal"
+track = "C2"
+split = "train"
+paper_ref = "b0f7bd9a594a"
+system = "3D Edwards-Anderson Ising spin glass, simple cubic, bimodal couplings J_{ij}=±1, periodic BC"
+model_family = "ea-ising-3d-bimodal-sg"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["nu", "gamma"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.05
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

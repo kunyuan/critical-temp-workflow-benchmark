@@ -1,0 +1,57 @@
+{
+ "id": "ct-c3-stl-xy-antifq-chiral",
+ "track": "C3",
+ "split": "validation",
+ "question": "The biquadratic (quadrupolar) planar spin model is defined on a stacked triangular lattice (STL) with Hamiltonian H' = -J' * sum_{<i,j>} cos^2(phi_i - phi_j), where phi_i is the spin angle, with antiferroquadrupolar coupling J'<0 and positive interplane coupling. Monte Carlo finite-size scaling is used to measure the critical indices nu_q and gamma_q. What is the ORDER of the finite-temperature phase transition of the antiferroquadrupolar (J'<0) biquadratic exchange model on the stacked triangular lattice? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\". Also include \"universality_class\" using one of: \"3D XY\", \"chiral\", \"2D Ising\", \"3D Heisenberg\", \"other\".",
+ "answer": {
+  "transition_order": "continuous",
+  "universality_class": "chiral"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   },
+   "universality_class": {
+    "chiral": [
+     "chiral",
+     "chiral universality class",
+     "chiral universality",
+     "chiral critical behavior"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.1103/physrevb.63.172412",
+  "system": "Antiferroquadrupolar biquadratic planar spin model on stacked triangular lattice, J'<0",
+  "model_family": "xy-biquadratic-stl",
+  "quantity_ids": [
+   "transition_order",
+   "universality_class"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "The antiferroquadrupolar biquadratic exchange model on the stacked triangular lattice (STL)... undergoes a second-order transition. Finite-size scaling analysis yields critical indices nu_q=0.520±0.003 and gamma_q=1.072±0.009... consistent with chiral universality values",
+  "verification_status": "source_verified",
+  "difficulty_note": "Nonchiral model (no ordered plaquette chirality) exhibits chiral universality class behavior; frustration/noncollinearity rather than plaquette chirality determines the universality class.",
+  "paper_ref": "c6e1d59deced",
+  "source_ref": "aae4e21a5731"
+ }
+}

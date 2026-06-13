@@ -1,0 +1,33 @@
+{
+ "id": "ct-c2-3dxy-columnar-disorder",
+ "track": "C2",
+ "split": "validation",
+ "question": "Consider the three-dimensional XY lattice model on a simple cubic lattice with quenched columnar (line) disorder: in-plane couplings J_{i,x} and J_{i,y} are drawn uniformly from {0.1, 1.9} for each site column, while z-couplings are uniform J_{i,z} = 1. The model describes the superconducting transition in a material with parallel columnar defects. An anisotropic finite-size scaling (FSS) analysis is performed with aspect ratio L_z ~ L^{zeta}, where zeta is the anisotropy exponent (ratio of parallel to perpendicular correlation-length exponents). From Monte Carlo FSS using the Binder ratio g = 1 - <M^4>/(3<M^2>^2) and helicity modulus, determine the following exponents: (1) nu: the perpendicular (in-plane) correlation-length exponent,     where xi_perp ~ |T - T_c|^{-nu}. (2) zeta: the anisotropy exponent defined by xi_z ~ xi_perp^{zeta}     (equivalently nu_parallel / nu_perp). (3) z_XY: the dynamic critical exponent for single-spin heat-bath Monte Carlo dynamics     (local phase-variable relaxational updates), defined by tau ~ xi_perp^{z_XY}. (4) z_loop: the dynamic critical exponent for elementary-vortex-loop heat-bath Monte Carlo     dynamics (loop updates of the dual model), defined by tau ~ xi_perp^{z_loop}. Report as a JSON object with keys \"nu\", \"zeta\", \"z_XY\", \"z_loop\". Each value should be a float.",
+ "answer": {
+  "nu": 1.2,
+  "zeta": 1.3,
+  "z_XY": 2.6,
+  "z_loop": 3.4
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.1
+ },
+ "metadata": {
+  "doi": "10.1103/physrevb.70.054508",
+  "system": "3D XY lattice model, simple cubic lattice, quenched columnar disorder (in-plane couplings from {0.1,1.9}, z-couplings=1)",
+  "model_family": "xy-3d-columnar-disorder",
+  "quantity_ids": [
+   "nu",
+   "zeta",
+   "z_XY",
+   "z_loop"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "correlation length exponent is nu=1.2+/-0.1; anisotropy exponent zeta=1.3+/-0.1; dynamic exponent z_XY=2.6+/-0.1 (single-spin heat-bath); z_loop=3.4+/-0.1 (elementary-loop heat-bath, dual loop model).",
+  "verification_status": "source_verified",
+  "difficulty_note": "Columnar disorder gives new universality class; anisotropic FSS required. Both static and dynamic exponents. Two distinct dynamic universality classes.",
+  "paper_ref": "92bc52738c83",
+  "source_ref": "2d8a750af277"
+ }
+}

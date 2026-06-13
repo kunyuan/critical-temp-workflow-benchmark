@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-ising-ammann-beenker-j2half"
+track = "C1"
+split = "validation"
+paper_ref = "9188e45eab13"
+system = "J1-J2 AFM Ising on Ammann-Beenker quasicrystal, J2/J1=0.5, open BC"
+model_family = "ising-quasicrystal"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["kBTN_over_J1"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.00102
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

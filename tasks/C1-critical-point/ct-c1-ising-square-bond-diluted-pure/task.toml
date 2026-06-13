@@ -1,0 +1,20 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-ising-square-bond-diluted-pure"
+track = "C1"
+split = "train"
+paper_ref = "b97792582990"
+system = "2D square Ising, sigma=1.0 (pure), free BC, L=256-4096"
+model_family = "ising-nn-square-2d"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["kBTc_over_J"]
+
+[verifier]
+type = "scalar_tolerance"
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

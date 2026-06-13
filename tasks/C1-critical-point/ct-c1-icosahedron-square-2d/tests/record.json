@@ -1,0 +1,27 @@
+{
+ "id": "ct-c1-icosahedron-square-2d",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the two-dimensional classical icosahedron spin model on the square lattice. Each lattice site carries a unit vector spin that can point to one of the 12 vertices of a regular icosahedron. Neighboring spins interact ferromagnetically with Hamiltonian H = -J * sum_{<i,j>} n_i . n_j, where n_i and n_j are unit vectors pointing to icosahedron vertices and the dot product is their inner product, with coupling constant J = 1. What is the critical temperature T_c of the single continuous order-disorder phase transition, in units of J/k_B (i.e., k_B T_c / J)? Output a JSON object {\"kBTc_over_J\": <value>}.",
+ "answer": {
+  "kBTc_over_J": 0.555
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.00225
+ },
+ "metadata": {
+  "doi": "10.1103/physreve.96.062112",
+  "system": "2D icosahedron spin model on square lattice, J=1",
+  "model_family": "icosahedron-square",
+  "quantity_ids": [
+   "kBTc_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "exhibits a single continuous (second-order) order-disorder phase transition at the critical temperature T_c = 0.5550 +/- 0.0001; below this temperature the low-temperature phase breaks the full icosahedral symmetry down to a fivefold axial symmetry.",
+  "verification_status": "source_verified",
+  "difficulty_note": "2D icosahedron (12-state discrete orientation) spin model on square lattice, CTMRG method",
+  "paper_ref": "6452b260d91b",
+  "source_ref": "d2370ba27c23"
+ }
+}

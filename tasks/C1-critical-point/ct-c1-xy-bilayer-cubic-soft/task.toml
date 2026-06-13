@@ -1,0 +1,20 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-xy-bilayer-cubic-soft"
+track = "C1"
+split = "validation"
+paper_ref = "1124ba3f0872"
+system = "XY hard/soft-magnetic bilayer on simple-cubic lattice, L=8-40"
+model_family = "xy-cubic"
+gold_provenance = "paper_reported_numeric"
+verification_status = "needs_original_paper"
+quantity_ids = ["kBTc_over_Js"]
+
+[verifier]
+type = "scalar_tolerance"
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

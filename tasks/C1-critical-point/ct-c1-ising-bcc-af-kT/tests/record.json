@@ -1,0 +1,27 @@
+{
+ "id": "ct-c1-ising-bcc-af-kT",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the nearest-neighbor antiferromagnetic Ising model on a body-centered cubic (BCC) lattice. Each site carries a spin S_i = +/-1, and nearest-neighbor pairs interact via H = -K * sum_{<i,j>} S_i S_j with exchange coupling constant K > 0 (ferromagnetic sign convention, so the AF ordering uses -K with K > 0 defining the energy scale). The lattice has periodic boundary conditions and linear sizes N up to 16. What is the infinite-lattice critical temperature T_inf estimated from finite-size scaling of the specific-heat peak positions, expressed as k*T_inf / K? Output a JSON object {\"kTc_over_K\": <value>}.",
+ "answer": {
+  "kTc_over_K": 6.36
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.00197
+ },
+ "metadata": {
+  "doi": "10.1103/physrevb.16.4164",
+  "system": "BCC nearest-neighbor Ising antiferromagnet, N<=16",
+  "model_family": "ising-bcc",
+  "quantity_ids": [
+   "kTc_over_K"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "The infinite-lattice ordering temperature T_inf at zero applied field for the body-centered cubic (bcc) nearest-neighbor Ising antiferromagnet is estimated as kT_inf/K = 6.36 +/- 0.03 based on finite-size scaling of the specific-heat peak positions for lattice sizes N <= 16.",
+  "verification_status": "source_verified",
+  "difficulty_note": "BCC Ising antiferromagnet, FSS of specific-heat peaks, small system sizes N<=16",
+  "paper_ref": "6809865796ff",
+  "source_ref": "ff56f635b0cc"
+ }
+}

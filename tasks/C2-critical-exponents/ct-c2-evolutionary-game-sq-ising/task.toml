@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c2-evolutionary-game-sq-ising"
+track = "C2"
+split = "validation"
+paper_ref = "4d03d766d92f"
+system = "Spatial evolutionary game (weak PD) on square lattice, mapped to antiferromagnetic Ising; T=0.02, path a=(1/2)p+0.4, left critical point p_c^{(1)}=0.01127"
+model_family = "ising-sq-antiferro"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["beta_over_nu", "gamma_over_nu", "nu"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.05
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

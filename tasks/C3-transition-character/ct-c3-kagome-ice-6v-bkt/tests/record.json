@@ -1,0 +1,60 @@
+{
+ "id": "ct-c3-kagome-ice-6v-bkt",
+ "track": "C3",
+ "split": "train",
+ "question": "A six-vertex (6V) model is defined by arrow configurations on a kagome lattice that satisfy the two-in/two-out ice rule at every vertex, with vertex Boltzmann weights a, b, and c. The model exhibits partial vortex-lattice phases VL-H (honeycomb-face vortex lattice) and VL-T (triangular-face vortex lattice), which melt into a vortex-disordered phase VL-D. Monte Carlo simulations with finite-size scaling are used. What is the ORDER of the phase transition for the melting of the partial vortex-lattice phases VL-H and VL-T into the vortex-disordered phase VL-D? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\". If the paper also identifies the universality class, include \"universality_class\" using one of: \"2D Ising\", \"BKT\", \"3D XY\", \"3D Heisenberg\", \"chiral\", \"tricritical\", \"other\".",
+ "answer": {
+  "transition_order": "bkt",
+  "universality_class": "BKT"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless",
+     "bkt",
+     "berezinskii-kosterlitz-thouless transition"
+    ]
+   },
+   "universality_class": {
+    "BKT": [
+     "bkt",
+     "berezinskii-kosterlitz-thouless",
+     "kosterlitz-thouless",
+     "kt transition",
+     "2d xy"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.48550/arxiv.2506.00804",
+  "system": "Kagome-lattice six-vertex (6V) model, vortex-lattice phases VL-H and VL-T",
+  "model_family": "6-vertex-kagome",
+  "quantity_ids": [
+   "transition_order",
+   "universality_class"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "The melting transitions of the partial vortex-lattice phases VL-H and VL-T into the vortex-disordered phase VL-D behave as Berezinskii–Kosterlitz–Thouless (BKT) transitions in the numerical data accessed: inside the VL-H and VL-T phases measured vortex two-point correlation functions decay algebraically",
+  "verification_status": "source_verified",
+  "difficulty_note": "BKT identification requires algebraic decay and essential-singularity scaling; paper explicitly names BKT.",
+  "paper_ref": "0fc670e0ca96",
+  "source_ref": "a68c7047913d"
+ }
+}

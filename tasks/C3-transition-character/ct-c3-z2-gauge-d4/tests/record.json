@@ -1,0 +1,55 @@
+{
+ "id": "ct-c3-z2-gauge-d4",
+ "track": "C3",
+ "split": "validation",
+ "question": "The pure Z_2 lattice gauge theory in four space-time dimensions (d=4) is simulated by Metropolis Monte Carlo with thermal cycles and quench experiments on 4^4 hypercubic lattices. The model has gauge coupling K and no matter (Higgs coupling h=0). The transition separates an electric confinement regime (small K) from an unconfined regime (large K). What is the ORDER of the bulk phase transition in the pure d=4 Z_2 lattice gauge theory? Answer in JSON with field \"transition_order\" using one of: \"first_order\", \"continuous\", \"bkt\".",
+ "answer": {
+  "transition_order": "first_order"
+ },
+ "verifier": {
+  "type": "categorical_exact",
+  "aliases": {
+   "transition_order": {
+    "continuous": [
+     "second order",
+     "second-order",
+     "2nd order",
+     "continuous"
+    ],
+    "first_order": [
+     "first order",
+     "1st order",
+     "discontinuous",
+     "first-order",
+     "strongly first order"
+    ],
+    "bkt": [
+     "kosterlitz-thouless",
+     "kt",
+     "berezinskii-kosterlitz-thouless"
+    ]
+   }
+  }
+ },
+ "metadata": {
+  "doi": "10.1103/physrevd.21.3360",
+  "system": "Pure Z_2 lattice gauge theory on 4D hypercubic lattice, confinement-deconfinement transition",
+  "model_family": "z2-gauge-4d",
+  "quantity_ids": [
+   "transition_order"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "The pure Z_2 lattice gauge theory on a four-dimensional hypercubic lattice with Higgs coupling set to h=0 exhibits a strongly first-order phase transition separating an electric confinement regime (Wilson loops obey an area law) for small gauge coupling K and an unconfined regime",
+  "verification_status": "source_verified",
+  "difficulty_note": "Clear strongly first-order result confirmed by hysteresis, metastability, and agreement with Creutz et al.",
+  "cold_solve": {
+   "round": 1,
+   "probe_model": "claude-sonnet baseline (a cloud HPC platform sandbox for C1)",
+   "date": "2026-06-13",
+   "question_sha256": "c2a82e15041e54ec",
+   "result": "cracked"
+  },
+  "paper_ref": "b8b8d6eeb819",
+  "source_ref": "5374a4d2fcc1"
+ }
+}

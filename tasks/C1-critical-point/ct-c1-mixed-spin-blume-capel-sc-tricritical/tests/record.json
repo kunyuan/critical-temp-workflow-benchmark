@@ -1,0 +1,27 @@
+{
+ "id": "ct-c1-mixed-spin-blume-capel-sc-tricritical",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the mixed-spin Blume-Capel model on the simple cubic lattice. The lattice is partitioned into two interpenetrating sublattices Lambda_1 and Lambda_2. Lambda_1 carries spin-1/2 sites (sigma_i = +/-1/2), Lambda_2 carries spin-1 sites (S_j in {-1, 0, +1}). The Hamiltonian is H = -J sum_{<ij>} sigma_i S_j - Delta sum_{j in Lambda_2} S_j^2, where J>0 is the ferromagnetic nearest-neighbor coupling (between Lambda_1 and Lambda_2 sites only) and Delta is the crystal-field anisotropy. As Delta increases at fixed J, the ferromagnetic-paramagnetic transition changes from second order to first order at the tricritical anisotropy Delta_t. Using the Wang-Landau Monte Carlo algorithm to determine the density of states, supplemented by Metropolis checks, locate the tricritical point and determine k_B T_t / J (quantity: kBTt_over_J). Output a JSON object {\"kBTt_over_J\": <value>}.",
+ "answer": {
+  "kBTt_over_J": 0.439
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.00285
+ },
+ "metadata": {
+  "doi": "10.48550/arXiv.1912.04463",
+  "system": "Mixed-spin (1/2,1) Blume-Capel model on simple cubic lattice, Wang-Landau + Metropolis MC",
+  "model_family": "blume-capel-sc-mixed-spin",
+  "quantity_ids": [
+   "kBTt_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "In the mixed-spin Blume-Capel model with spin-1/2 and spin S (S=1,2,3) on the simple cubic lattice, the tricritical point is located at (Delta_t/J=2.978(1); k_B T_t/J=0.439(1)).",
+  "verification_status": "source_verified",
+  "difficulty_note": "Tricritical point; result is S-independent for S=1,2,3 on SC lattice; Wang-Landau density-of-states method",
+  "paper_ref": "70572f356a77",
+  "source_ref": "53c80278694f"
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "id": "ct-c2-diluted-3potts-sq-p080",
+ "track": "C2",
+ "split": "train",
+ "question": "Consider the three-state Potts model on a two-dimensional square lattice with quenched nonmagnetic disorder at spin concentration p=0.80 (fraction p of lattice sites carry a spin; the remaining 1-p are nonmagnetic vacancies). The ferromagnetic exchange coupling is J > 0. A Monte Carlo simulation uses finite-size scaling (FSS) — log-log fits of the magnetization M_L, susceptibility chi_L, and Binder-cumulant derivative U'_L versus system size L — to extract static critical exponents at the ferromagnetic transition. Report the following critical exponents as a JSON object with keys: \"nu\" (correlation-length exponent), \"alpha\" (specific-heat exponent), \"gamma\" (susceptibility exponent), \"beta\" (magnetization exponent). Each value should be a float.",
+ "answer": {
+  "nu": 1.03,
+  "alpha": 0.11,
+  "gamma": 1.57,
+  "beta": 0.16
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.1
+ },
+ "metadata": {
+  "doi": "10.7868/S3034641X25100086",
+  "system": "Three-state Potts model, square lattice, dilution p=0.80",
+  "model_family": "3-state-potts-sq-diluted",
+  "quantity_ids": [
+   "nu",
+   "alpha",
+   "gamma",
+   "beta"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "the static critical exponents are nu = 1.03(3) (correlation-length exponent), alpha = 0.11(3) (specific-heat exponent), gamma = 1.57(3) (susceptibility exponent), and beta = 0.16(3) (magnetization exponent).",
+  "verification_status": "source_verified",
+  "difficulty_note": "Strong dilution; larger FSS errors (3 in last digit). Converged to diluted fixed point.",
+  "paper_ref": "341ea623f741",
+  "source_ref": "9b68e825d428"
+ }
+}

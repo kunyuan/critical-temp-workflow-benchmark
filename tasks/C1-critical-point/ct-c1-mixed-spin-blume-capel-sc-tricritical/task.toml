@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-mixed-spin-blume-capel-sc-tricritical"
+track = "C1"
+split = "train"
+paper_ref = "70572f356a77"
+system = "Mixed-spin (1/2,1) Blume-Capel model on simple cubic lattice, Wang-Landau + Metropolis MC"
+model_family = "blume-capel-sc-mixed-spin"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["kBTt_over_J"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.00285
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

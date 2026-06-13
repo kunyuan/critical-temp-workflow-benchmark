@@ -1,0 +1,34 @@
+{
+ "id": "ct-c1-ffxy-nnn-chirality",
+ "track": "C1",
+ "split": "train",
+ "question": "Consider the two-dimensional fully frustrated XY (FFXY) model on a square lattice with nearest-neighbor (NN) coupling J and next-nearest-neighbor (NNN) coupling xJ with x=0.5, at external magnetic flux f=1/2 per elementary plaquette. Spins are classical XY (planar) rotors. The low-temperature phase (x < x_0 = 1/sqrt(2)) has both continuous U(1) quasi-long-range order and discrete Z_2 (staggered plaquette chirality) order, giving rise to two separate phase transitions. Using Monte Carlo simulation on square lattices up to L=72 with Binder-cumulant analysis of the staggered chiral magnetization, determine the Z_2 chiral ordering transition temperature T_c^{Z2} in units of J/k_B (quantity: kBTc_Z2_over_J). Output a JSON object {\"kBTc_Z2_over_J\": <value>}.",
+ "answer": {
+  "kBTc_Z2_over_J": 0.403
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.0031
+ },
+ "metadata": {
+  "doi": "10.1103/physrevb.62.r9287",
+  "system": "2D fully frustrated XY model on square lattice, NN coupling J + NNN coupling xJ with x=0.5, flux f=1/2",
+  "model_family": "ffxy-square-nnn",
+  "quantity_ids": [
+   "kBTc_Z2_over_J"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "for x=0.5 Monte Carlo simulations with lattice sizes up to L=72 and Binder-cumulant analysis of the staggered chiral magnetization yield the estimate k_B T_c^{Z_2}/J=0.403±0.003",
+  "verification_status": "source_verified",
+  "difficulty_note": "Z2 chirality transition in FFXY model; distinct from the BKT U(1) transition; model has two separate transition temperatures",
+  "cold_solve": {
+   "round": 1,
+   "probe_model": "claude-sonnet baseline (a cloud HPC platform C-MC, async, 1h watchdog)",
+   "date": "2026-06-13",
+   "question_sha256": "65cef0692e611041",
+   "result": "survived"
+  },
+  "paper_ref": "b0d18502635f",
+  "source_ref": "26bccfdb5ea1"
+ }
+}

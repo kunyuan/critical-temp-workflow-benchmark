@@ -1,0 +1,31 @@
+{
+ "id": "ct-c2-evolutionary-game-sq-ising",
+ "track": "C2",
+ "split": "validation",
+ "question": "A spatial evolutionary game on a two-dimensional square lattice (N = L^2 sites, periodic boundary conditions) is mapped to an antiferromagnetic Ising-like model with a staggered-magnetization order parameter m_s. Agent strategies S_i in {+1,-1} evolve via single-site self-questioning updates at effective social temperature T = 0.02, along the parameter path a = (1/2)p + 0.4 in the weak Prisoner's Dilemma parameterization. Finite-size scaling (FSS) is performed at two second-order (continuous) antiferromagnetic critical points located at p_c^{(1)} = 0.01127 +/- 0.00014 and p_c^{(2)} = 0.13156 +/- 0.00008 using: (i) log-log fits of m_L(p_c) vs L to get beta/nu (magnetization-to-correlation-length exponent ratio), (ii) log-log fits of chi_L(p_c) vs L (chi = N[<m_s^2> - <m_s>^2]) to get gamma/nu (susceptibility-to-correlation-length exponent ratio), (iii) log-log fits of U'_L(p_c) vs L (Binder cumulant derivative) to get 1/nu (inverse correlation-length exponent). At p_c^{(1)} = 0.01127, report as a JSON object with keys: \"beta_over_nu\" (beta/nu ratio), \"gamma_over_nu\" (gamma/nu ratio), \"nu\" (correlation-length exponent, obtained as 1 / (1/nu) from the fit). Each value should be a float.",
+ "answer": {
+  "beta_over_nu": 0.116,
+  "gamma_over_nu": 1.749,
+  "nu": 1.0235
+ },
+ "verifier": {
+  "type": "scalar_tolerance",
+  "rel_tol": 0.05
+ },
+ "metadata": {
+  "doi": "10.1088/0253-6102/66/4/439",
+  "system": "Spatial evolutionary game (weak PD) on square lattice, mapped to antiferromagnetic Ising; T=0.02, path a=(1/2)p+0.4, left critical point p_c^{(1)}=0.01127",
+  "model_family": "ising-sq-antiferro",
+  "quantity_ids": [
+   "beta_over_nu",
+   "gamma_over_nu",
+   "nu"
+  ],
+  "gold_provenance": "paper_reported_numeric",
+  "source_excerpt": "at p_c^{(1)} = 0.01127, beta/nu = 0.116 +/- 0.0093, gamma/nu = 1.749 +/- 0.0212, and 1/nu = 0.977 +/- 0.0391; within uncertainties these agree with 2D Ising values (beta/nu ~ 1/8, gamma/nu ~ 7/4, nu ~ 1).",
+  "verification_status": "source_verified",
+  "difficulty_note": "Ising universality class for a game-theoretic lattice model; exponent ratios directly measured via FSS log-log fits.",
+  "paper_ref": "4d03d766d92f",
+  "source_ref": "823793d98caf"
+ }
+}

@@ -1,0 +1,21 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-ffxy-nnn-chirality"
+track = "C1"
+split = "train"
+paper_ref = "b0d18502635f"
+system = "2D fully frustrated XY model on square lattice, NN coupling J + NNN coupling xJ with x=0.5, flux f=1/2"
+model_family = "ffxy-square-nnn"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["kBTc_Z2_over_J"]
+
+[verifier]
+type = "scalar_tolerance"
+rel_tol = 0.0031
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0

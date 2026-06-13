@@ -1,0 +1,20 @@
+version = "1.0"
+
+[metadata]
+id = "ct-c1-af-quadrupole-rotor-diamond"
+track = "C1"
+split = "validation"
+paper_ref = "3705e0936e88"
+system = "Classical antiferro quadrupole rotor (plane-rotor, |Q|=1) on diamond lattice, AF coupling J=1, c=3.0, h=0"
+model_family = "xy-rotor-diamond-af"
+gold_provenance = "paper_reported_numeric"
+verification_status = "source_verified"
+quantity_ids = ["kBTc_over_J"]
+
+[verifier]
+type = "scalar_tolerance"
+scorer = "python tests/score.py --pred pred.json"
+timeout_sec = 120.0
+
+[agent]
+timeout_sec = 3600.0
